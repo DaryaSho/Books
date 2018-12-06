@@ -92,7 +92,7 @@ namespace АРМ
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
-
+            ///sd
             textBox7.Multiline = true;
             // Add vertical scroll bars to the TextBox control.
             textBox7.ScrollBars = ScrollBars.Vertical;
