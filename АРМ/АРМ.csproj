@@ -79,9 +79,9 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Losses.cs" />
-    <Compile Include="Migrations\201812051826298_InitialMigration.cs" />
-    <Compile Include="Migrations\201812051826298_InitialMigration.Designer.cs">
-      <DependentUpon>201812051826298_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201812061054025_InitialMigration.cs" />
+    <Compile Include="Migrations\201812061054025_InitialMigration.Designer.cs">
+      <DependentUpon>201812061054025_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -91,7 +91,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Publicat.cs" />
+    <Compile Include="Publication.cs" />
     <Compile Include="Sales.cs" />
     <Compile Include="Stock.cs" />
     <Compile Include="Style.cs" />
@@ -103,8 +103,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812051826298_InitialMigration.resx">
-      <DependentUpon>201812051826298_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812061054025_InitialMigration.resx">
+      <DependentUpon>201812061054025_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
