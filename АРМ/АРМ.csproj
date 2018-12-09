@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\agenda.png" />
     <None Include="Resources\repeat-1.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\add-1.png" />

@@ -14,6 +14,7 @@ namespace АРМ
 {
     public partial class Form2 : MetroForm
     {
+        string put = @"G:\курсовая Даши\бд\АРМ\АРМ\Resources\notebook-5.png";
         public Form2()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace АРМ
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            addCombobox();
 
         }
 
@@ -42,64 +44,15 @@ namespace АРМ
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (!Check(textBox5) || !Check(textBox6)) MessageBox.Show("Заполните поля");
-            DialogResult dialogResult = MessageBox.Show("Добавить в таблицу жанров", "Добавление", MessageBoxButtons.YesNo);
-            
-            if ((Check(textBox5) && (CheckTable(textBox5.Text, 1) && Check(textBox6))))
-            {
-                if (dialogResult == DialogResult.Yes)
-                {
-                   
-                    //do something 
-                    Add(textBox5.Text, textBox6.Text, 1);
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //do something else
-                }
-                Add(textBox5.Text, textBox6.Text, 1);
-                cleartextBox();
 
-
-            }
-           
-            //using (UserContext db = new UserContext())
-            //{
-
-
-            //    Style style = new Style
-            //    {
-            //        StyleName = textBox5.Text,
-            //        StyleDescrip = textBox6.Text,
-            //    };
-
-            //      db.Styles.Add(style);            
-            //    db.SaveChanges();
-            //    MessageBox.Show("Все сохранилось!");
-            //}
+            addDialog(1, "Жанры");
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Добавить в таблицу категорий", "Добавление", MessageBoxButtons.YesNo);
+            addDialog(2, "Категории");
 
-            if ((Check(textBox5) && (CheckTable(textBox5.Text, 2) && Check(textBox6))))
-            {
-                if (dialogResult == DialogResult.Yes)
-                {
-                    //do something 
-                    Add(textBox5.Text, textBox6.Text, 2);
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //do something else
-                }
-                Add(textBox5.Text, textBox6.Text, 2);
-                cleartextBox();
-
-            }
-            if (!Check(textBox5) || !Check(textBox6)) MessageBox.Show("Заполните поля");
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -153,24 +106,9 @@ namespace АРМ
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Добавить в таблицу публикаций", "Добавление", MessageBoxButtons.YesNo);
+            addDialog(3, "Издательство");
+           // MessageBox.Show("Добавление прошло успешно! с=");
 
-            if ((Check(textBox5) && (CheckTable(textBox5.Text, 3) && Check(textBox6))))
-            {
-                if (dialogResult == DialogResult.Yes)
-                {
-                    //do something 
-                    Add(textBox5.Text, textBox6.Text, 3);
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //do something else
-                }
-                Add(textBox5.Text, textBox6.Text, 3);
-                cleartextBox();
-
-            }
-            if (!Check(textBox5) || !Check(textBox6)) MessageBox.Show("Заполните поля");
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -180,41 +118,15 @@ namespace АРМ
             {
                 foreach (Publication publication in db.Publication)
                 {
-
                     textBox7.Text += publication.PublicatName + "\r\n" + publication.PublicatDescrip + "\r\n";
                     textBox7.Text += "--------------------------------------------------------\r\n";
-
                 }
             }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
-            using (UserContext db = new UserContext())
-            {
-                // ключ по которому будем удалять данные 
-
-
-                // Вариант 1. Удаление записи. 
-                foreach (Style style in db.Styles)
-                {
-                    if (style.StyleName == textBox5.Text)
-                    {
-
-                        db.Styles.Remove(style);
-                        MessageBox.Show("Все удаилось!");
-                    }
-
-
-                }
-                db.SaveChanges();
-
-
-            }
-
-
-
+            remove(1, "Жанры", textBox5.Text);
 
         }
 
@@ -259,7 +171,7 @@ namespace АРМ
                 if (index == 2) db.Categors.Add(new Categor { CategorName = name, CategorDescrip = descript });
                 if (index == 3) db.Publication.Add(new Publication { PublicatName = name, PublicatDescrip = descript });
                 db.SaveChanges();
-                MessageBox.Show("Добавление прошло успешно! с=");
+               
 
             }
 
@@ -271,7 +183,7 @@ namespace АРМ
         {
             bool result = false;
             if (textBox.Text != "") result = true;
-            
+
             return result;
         }
 
@@ -310,6 +222,14 @@ namespace АРМ
                     }
 
                 }
+                if (index == 4)
+                {
+                    foreach (var element in db.Books)
+                    {
+                        if (element.BookName == name) lengt++;
+                    }
+
+                }
 
                 if (lengt == 0)
                     result = true;
@@ -329,49 +249,13 @@ namespace АРМ
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            using (UserContext db = new UserContext())
-            {
-                // ключ по которому будем удалять данные 
-
-
-                // Вариант 1. Удаление записи. 
-                foreach (Categor categor in db.Categors)
-                {
-                    if (categor.CategorName == textBox5.Text)
-                    {
-
-                        db.Categors.Remove(categor);
-                        MessageBox.Show("Все удаилось!");
-                    }
-
-
-                }
-                db.SaveChanges();
-            }
+            remove(2, "Категории", textBox5.Text);
 
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            using (UserContext db = new UserContext())
-            {
-                // ключ по которому будем удалять данные 
-
-
-                // Вариант 1. Удаление записи. 
-                foreach (Publication categor in db.Publication)
-                {
-                    if (categor.PublicatName == textBox5.Text)
-                    {
-
-                        db.Publication.Remove(categor);
-                        MessageBox.Show("Все удаилось!");
-                    }
-
-
-                }
-                db.SaveChanges();
-            }
+            remove(3, "Издательство", textBox5.Text);
         }
 
         public void cleartextBox()
@@ -381,11 +265,363 @@ namespace АРМ
 
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            insertTable(1, "Жанров", textBox5.Text);
+        }
+
+        public void removeTable(int Index, string name)
+        {
+            using (UserContext db = new UserContext())
+            {
+
+                if (Index == 1)
+                {
+
+                    foreach (Style style in db.Styles)
+                    {
+                        if (style.StyleName == name)
+                        {
+                            db.Styles.Remove(style);
+                            
+                        }
+
+                    }
+                }
+                if (Index == 2)
+                {
+                    foreach (Categor categor in db.Categors)
+                    {
+                        if (categor.CategorName == name)
+                        {
+                            db.Categors.Remove(categor);
+                          
+                        }
+
+                    }
+                }
+
+                if (Index== 3)
+                {
+                    foreach (Publication publication in db.Publication)
+                    {
+                        if (publication.PublicatName == name)
+                        {
+                            db.Publication.Remove(publication);
+                           
+                        }
+
+                    }
+
+                }
+                 
+                    db.SaveChanges();
+
+                }
+            }
+
+
+        public void remove(int index, string name, string text)
+        {
+            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы "+name, "Удаление",  MessageBoxButtons.YesNo);
+            if (!Check(textBox5)) MessageBox.Show("Заполните название "+name);
+            else
+            {
+                using (UserContext db = new UserContext())
+                {
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        removeTable(index, text);
+                        MessageBox.Show("Удаление прошло успешно");
+
+                    }
+                    
+                    db.SaveChanges();
+
+
+                }
+
+
+            }
+        }
+        public void addDialog (int index, string name)
+        {
+            DialogResult dialogResult = MessageBox.Show("Добавить в таблицу "+name, "Добавление", MessageBoxButtons.YesNo);
+            if (!Check(textBox5) || !Check(textBox6)) MessageBox.Show("Заполните поля");
+
+            if ((Check(textBox5) && (CheckTable(textBox5.Text, index) && Check(textBox6))))
+            {
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Add(textBox5.Text, textBox6.Text, index);
+                    MessageBox.Show("Добавление прошло успешно! с=");
+                }
+                
+                cleartextBox();
+
+
+            }
+        }
+
+        public void insertTable(int index, string name, string text)
+        {
+            DialogResult dialogResult = MessageBox.Show("Изменить запись из таблице " + name, "Изменение", MessageBoxButtons.YesNo);
+            if (!Check(textBox5)) MessageBox.Show("Заполните название " + name);
+            else
+            {
+                using (UserContext db = new UserContext())
+                {
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        removeTable(index, text);
+                        Add(textBox5.Text, textBox6.Text, index);
+                        MessageBox.Show("Изменение прошло успешно");
+
+                    }
+                   
+                    db.SaveChanges();
+
+
+                }
+
+
+            }
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            insertTable(2, "Категорий", textBox5.Text);
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            insertTable(3, "Издательст", textBox5.Text);
+        }
+
+        public void addCombobox()
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+            using (UserContext db = new UserContext())
+            {
+
+                foreach (Style style in db.Styles)
+                {
+                    comboBox2.Items.Add(style.StyleName.ToString());
+                }
+
+                foreach (Categor style in db.Categors)
+                {
+                    comboBox3.Items.Add(style.CategorName.ToString());
+                }
+
+                foreach (Publication style in db.Publication)
+                {
+                    comboBox1.Items.Add(style.PublicatName.ToString());
+                }
+            }
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Добавить новую книгу ", "Добавление", MessageBoxButtons.YesNo);
+            if (!Check(textBox1) || !Check(textBox2) || !Check(textBox3) || !Check(textBox4) || !Check(textBox8)
+                || comboBox1.Text=="" || comboBox2.Text == "" || comboBox3.Text == "") MessageBox.Show("Заполните поля");
+
+            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2)&& Check(textBox3)&& Check(textBox4)&& Check(textBox8)))
+            {
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (UserContext db = new UserContext())
+                    {
+                        db.Books.Add(new Books
+                        {
+                            BookName = textBox1.Text,
+                            BookAvtor = textBox2.Text,
+                            BookDescrip = textBox3.Text,
+                            BookPrice = Convert.ToInt32(textBox8.Text),
+                            PublicatiomYear = Convert.ToInt32(textBox4.Text),
+                            PublicationId = comboBox1.FindString(comboBox1.Text) + 1,
+                            StyleId = comboBox2.FindString(comboBox2.Text) + 1,
+                            CategorId = comboBox3.FindString(comboBox3.Text) + 1,
+                            BookPhoto = put,
+                        } );
+                        db.SaveChanges();
+
+
+                    }
+                    MessageBox.Show("Добавление прошло успешно! с=");
+                }
+                else MessageBox.Show("Добавление отменено.");
+
+                cleartextBox();
+
+
+            }
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            //функция
+            write();
+        }
+
+        public string catB(int index){
+            using (UserContext db = new UserContext())
+            {
+                string name = "---";
+                foreach (Categor element in db.Categors)
+                {
+                    if (element.Id == index) name = element.CategorName;
+                }
+
+                return name;
+            }
+        }
+
+
+        public string pubB(int index)
+        {
+            using (UserContext db = new UserContext())
+            {
+                string name = "---";
+                foreach (Publication element in db.Publication)
+                {
+                    if (element.Id == index) name = element.PublicatName;
+                }
+
+                return name;
+            }
+        }
+
+        public string stylB(int index)
+        {
+            using (UserContext db = new UserContext())
+            {
+                string name = "---";
+                foreach(Style element in db.Styles)
+                {
+                    if (element.Id==index) name =  element.StyleName;
+                }
+
+                return name;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        public void write()
+        {
+            using (UserContext db = new UserContext())
+            {
+                
+                foreach (Books element in db.Books)
+                {
+                   
+                    pictureBox18.Image = new Bitmap(element.BookPhoto);
+                    label4.Text = element.BookName;
+                    label5.Text = element.BookAvtor;
+                    label6.Text = stylB(element.StyleId);
+                    label7.Text = catB(element.CategorId);
+                    label8.Text = pubB(element.PublicationId);
+                    label16.Text = element.PublicatiomYear.ToString();
+                    label9.Text = element.BookPrice.ToString();
+                    textBox11.Text = element.BookDescrip;
+                    metroPanel1.Controls.Add(groupBox1);
+                }
+
+            }
+
+        }
+        public void writeBooks(string bookName, string bookAvtor, string bookPhoto, string bookDescrip, int Yaer, int bookPrise, string bookStyle, string bookCategor, string bookPublic)
+        {
+            PictureBox photo = new PictureBox();
+            photo.BackColor = Color.White;
+            photo.Width = 160;
+            photo.Height =200;
+            photo.Location = new Point(22, 22);
+            photo.Image = new Bitmap(bookPhoto);
+            groupBox1.Controls.Add(photo);
+
+            Label name = new Label();
+            name.Location = new Point(200, 20);
+            name.Text = bookName;
+            groupBox1.Controls.Add(name);
+
+            Label avtor = new Label();
+            avtor.Location = new Point(200, 50);
+            avtor.Text = bookAvtor;
+            groupBox1.Controls.Add(avtor);
+
+            TextBox descript = new TextBox();
+            descript.Width = 190;
+            descript.Height = 150;
+            descript.Location = new Point(200, 80);
+            descript.Text = bookDescrip;
+            descript.Multiline = true;
+            descript.ScrollBars = ScrollBars.Vertical;
+            descript.AcceptsReturn = true;
+            descript.AcceptsTab = true;
+            descript.SelectionStart = descript.Text.Length;
+            descript.ScrollToCaret();
+            descript.Refresh();
+            groupBox1.Controls.Add(descript);
+
+            Label style = new Label();
+            style.Location = new Point(570, 20);
+            style.Text = bookStyle;
+            groupBox1.Controls.Add(style);
+
+            Label categor = new Label();
+            style.Location = new Point(570, 20);
+            style.Text = bookStyle;
+            groupBox1.Controls.Add(style);
+
+            metroPanel1.Controls.Add(groupBox1);
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                put = openFileDialog1.FileName; 
+                pictureBox13.Image = new Bitmap(put);
+                
+            }
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            textBox11.Multiline = true;
+            textBox11.ScrollBars = ScrollBars.Vertical;
+            textBox11.AcceptsReturn = true;
+            textBox11.AcceptsTab = true;
+            textBox11.SelectionStart = textBox11.Text.Length;
+            textBox11.ScrollToCaret();
+            textBox11.Refresh();
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 
-
+}
    // private void pictureBox11_Click(object sender, EventArgs e)
     
 
-}
+

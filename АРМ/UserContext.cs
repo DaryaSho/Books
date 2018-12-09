@@ -18,7 +18,7 @@ namespace АРМ
         public DbSet<Categor> Categors { get; set; }
         public DbSet<Buyer> Buyers { get; set; }
         public DbSet<Losses> Losses { get; set; }
-        public DbSet<Publicat> Publicats { get; set; }
+        public DbSet<Publication> Publication { get; set; }
 
     }
 }
