@@ -64,6 +64,7 @@ namespace АРМ
         
         private void button2_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
             using (UserContext db = new UserContext())
             {
                 var users = db.Users;
@@ -103,6 +104,11 @@ namespace АРМ
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
         }
     }
 

@@ -14,6 +14,7 @@ namespace АРМ
 {
     public partial class Form2 : MetroForm
     {
+        int idbook =0;
         string put = @"G:\курсовая Даши\бд\АРМ\АРМ\Resources\notebook-5.png";
         public Form2()
         {
@@ -22,13 +23,28 @@ namespace АРМ
 
         private void Form2_Load(object sender, EventArgs e)
         {
+          
+            using (UserContext db = new UserContext())
+            {
+                Books books = db.Books.First();
+                idbook= books.Id;
+                dataGridView1.DataSource = db.Users.Local.ToList();
+
+
+            }
+           
+           
+           this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
             addCombobox();
+            ScrollAll();
+
 
         }
 
         private void metroScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            metroPanel1.Top = -metroScrollBar1.Value;
+
+          
 
         }
 
@@ -107,7 +123,7 @@ namespace АРМ
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             addDialog(3, "Издательство");
-           // MessageBox.Show("Добавление прошло успешно! с=");
+            // MessageBox.Show("Добавление прошло успешно! с=");
 
         }
 
@@ -171,7 +187,7 @@ namespace АРМ
                 if (index == 2) db.Categors.Add(new Categor { CategorName = name, CategorDescrip = descript });
                 if (index == 3) db.Publication.Add(new Publication { PublicatName = name, PublicatDescrip = descript });
                 db.SaveChanges();
-               
+
 
             }
 
@@ -288,7 +304,7 @@ namespace АРМ
                         if (style.StyleName == name)
                         {
                             db.Styles.Remove(style);
-                            
+
                         }
 
                     }
@@ -300,36 +316,36 @@ namespace АРМ
                         if (categor.CategorName == name)
                         {
                             db.Categors.Remove(categor);
-                          
+
                         }
 
                     }
                 }
 
-                if (Index== 3)
+                if (Index == 3)
                 {
                     foreach (Publication publication in db.Publication)
                     {
                         if (publication.PublicatName == name)
                         {
                             db.Publication.Remove(publication);
-                           
+
                         }
 
                     }
 
                 }
-                 
-                    db.SaveChanges();
 
-                }
+                db.SaveChanges();
+
             }
+        }
 
 
         public void remove(int index, string name, string text)
         {
-            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы "+name, "Удаление",  MessageBoxButtons.YesNo);
-            if (!Check(textBox5)) MessageBox.Show("Заполните название "+name);
+            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы " + name, "Удаление", MessageBoxButtons.YesNo);
+            if (!Check(textBox5)) MessageBox.Show("Заполните название " + name);
             else
             {
                 using (UserContext db = new UserContext())
@@ -340,7 +356,7 @@ namespace АРМ
                         MessageBox.Show("Удаление прошло успешно");
 
                     }
-                    
+
                     db.SaveChanges();
 
 
@@ -349,9 +365,9 @@ namespace АРМ
 
             }
         }
-        public void addDialog (int index, string name)
+        public void addDialog(int index, string name)
         {
-            DialogResult dialogResult = MessageBox.Show("Добавить в таблицу "+name, "Добавление", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Добавить в таблицу " + name, "Добавление", MessageBoxButtons.YesNo);
             if (!Check(textBox5) || !Check(textBox6)) MessageBox.Show("Заполните поля");
 
             if ((Check(textBox5) && (CheckTable(textBox5.Text, index) && Check(textBox6))))
@@ -361,7 +377,7 @@ namespace АРМ
                     Add(textBox5.Text, textBox6.Text, index);
                     MessageBox.Show("Добавление прошло успешно! с=");
                 }
-                
+
                 cleartextBox();
 
 
@@ -383,7 +399,7 @@ namespace АРМ
                         MessageBox.Show("Изменение прошло успешно");
 
                     }
-                   
+
                     db.SaveChanges();
 
 
@@ -433,9 +449,9 @@ namespace АРМ
         {
             DialogResult dialogResult = MessageBox.Show("Добавить новую книгу ", "Добавление", MessageBoxButtons.YesNo);
             if (!Check(textBox1) || !Check(textBox2) || !Check(textBox3) || !Check(textBox4) || !Check(textBox8)
-                || comboBox1.Text=="" || comboBox2.Text == "" || comboBox3.Text == "") MessageBox.Show("Заполните поля");
+                || comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "") MessageBox.Show("Заполните поля");
 
-            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2)&& Check(textBox3)&& Check(textBox4)&& Check(textBox8)))
+            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2) && Check(textBox3) && Check(textBox4) && Check(textBox8)))
             {
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -452,7 +468,7 @@ namespace АРМ
                             StyleId = comboBox2.FindString(comboBox2.Text) + 1,
                             CategorId = comboBox3.FindString(comboBox3.Text) + 1,
                             BookPhoto = put,
-                        } );
+                        });
                         db.SaveChanges();
 
 
@@ -469,11 +485,13 @@ namespace АРМ
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-            //функция
-            write();
+         
+  
+
+            //  write();
         }
 
-        public string catB(int index){
+        public string catB(int index) {
             using (UserContext db = new UserContext())
             {
                 string name = "---";
@@ -501,14 +519,16 @@ namespace АРМ
             }
         }
 
+
+
         public string stylB(int index)
         {
             using (UserContext db = new UserContext())
             {
                 string name = "---";
-                foreach(Style element in db.Styles)
+                foreach (Style element in db.Styles)
                 {
-                    if (element.Id==index) name =  element.StyleName;
+                    if (element.Id == index) name = element.StyleName;
                 }
 
                 return name;
@@ -525,101 +545,133 @@ namespace АРМ
 
         public void write()
         {
-            using (UserContext db = new UserContext())
-            {
-                
-                foreach (Books element in db.Books)
-                {
-                   
-                    pictureBox18.Image = new Bitmap(element.BookPhoto);
-                    label4.Text = element.BookName;
-                    label5.Text = element.BookAvtor;
-                    label6.Text = stylB(element.StyleId);
-                    label7.Text = catB(element.CategorId);
-                    label8.Text = pubB(element.PublicationId);
-                    label16.Text = element.PublicatiomYear.ToString();
-                    label9.Text = element.BookPrice.ToString();
-                    textBox11.Text = element.BookDescrip;
-                    metroPanel1.Controls.Add(groupBox1);
-                }
 
-            }
 
         }
         public void writeBooks(string bookName, string bookAvtor, string bookPhoto, string bookDescrip, int Yaer, int bookPrise, string bookStyle, string bookCategor, string bookPublic)
         {
-            PictureBox photo = new PictureBox();
-            photo.BackColor = Color.White;
-            photo.Width = 160;
-            photo.Height =200;
-            photo.Location = new Point(22, 22);
-            photo.Image = new Bitmap(bookPhoto);
-            groupBox1.Controls.Add(photo);
 
-            Label name = new Label();
-            name.Location = new Point(200, 20);
-            name.Text = bookName;
-            groupBox1.Controls.Add(name);
 
-            Label avtor = new Label();
-            avtor.Location = new Point(200, 50);
-            avtor.Text = bookAvtor;
-            groupBox1.Controls.Add(avtor);
-
-            TextBox descript = new TextBox();
-            descript.Width = 190;
-            descript.Height = 150;
-            descript.Location = new Point(200, 80);
-            descript.Text = bookDescrip;
-            descript.Multiline = true;
-            descript.ScrollBars = ScrollBars.Vertical;
-            descript.AcceptsReturn = true;
-            descript.AcceptsTab = true;
-            descript.SelectionStart = descript.Text.Length;
-            descript.ScrollToCaret();
-            descript.Refresh();
-            groupBox1.Controls.Add(descript);
-
-            Label style = new Label();
-            style.Location = new Point(570, 20);
-            style.Text = bookStyle;
-            groupBox1.Controls.Add(style);
-
-            Label categor = new Label();
-            style.Location = new Point(570, 20);
-            style.Text = bookStyle;
-            groupBox1.Controls.Add(style);
-
-            metroPanel1.Controls.Add(groupBox1);
+            // metroPanel1.Controls.Add(groupBox1);
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                put = openFileDialog1.FileName; 
+                put = openFileDialog1.FileName;
                 pictureBox13.Image = new Bitmap(put);
-                
+
             }
         }
 
-        private void textBox11_TextChanged(object sender, EventArgs e)
+        private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            textBox11.Multiline = true;
-            textBox11.ScrollBars = ScrollBars.Vertical;
-            textBox11.AcceptsReturn = true;
-            textBox11.AcceptsTab = true;
-            textBox11.SelectionStart = textBox11.Text.Length;
-            textBox11.ScrollToCaret();
-            textBox11.Refresh();
+            textBox7.Multiline = true;         
+            textBox7.ScrollBars = ScrollBars.Vertical;           
+            textBox7.AcceptsReturn = true;
+            textBox7.AcceptsTab = true;
+            textBox7.SelectionStart = textBox7.Text.Length;
+            textBox7.ScrollToCaret();
+            textBox7.Refresh();
         }
 
-        private void pictureBox18_Click(object sender, EventArgs e)
+        private void metroScrollBar1_Scroll_1(object sender, ScrollEventArgs e)
+        {
+            ScrollAll();
+           
+           
+        }
+
+
+        public void ScrollAll()
+        {
+            using (UserContext db = new UserContext())
+            {
+                Books books = new Books();
+                if (idbook > db.Books.Count()) {
+                    books = db.Books.First();
+                    idbook = books.Id;
+                }
+                //books = db.Books.Find();
+                 books = db.Books.Find(idbook+1);
+                    {
+                        pictureBox18.Image = new Bitmap(books.BookPhoto);
+                        label4.Text = books.BookName;
+                        label5.Text = books.BookAvtor;
+                        label8.Text = stylB(books.StyleId);
+                        label9.Text = pubB(books.PublicationId);
+                        label13.Text = books.PublicatiomYear.ToString();
+                        label11.Text = catB(books.CategorId);
+                        label15.Text = books.BookPrice.ToString();
+                        textBox9.Text = books.BookDescrip;
+                        
+
+
+                    }
+               
+
+                idbook++;
+            }
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы Книги " + label4.Text, "Удаление", MessageBoxButtons.YesNo);
+            
+          
+            
+                using (UserContext db = new UserContext())
+                {
+                    if (dialogResult == DialogResult.Yes)
+                    {
+
+                        foreach (Books books in db.Books)
+                        {
+                            if ((books.BookName == label4.Text)&&(books.BookAvtor==label5.Text)&&(pubB(books.PublicationId)==label9.Text))
+                            {
+                                db.Books.Remove(books);
+                                MessageBox.Show("Удаление прошло успешно");
+                            }
+
+                        }
+                       
+
+                    }
+                    if (dialogResult == DialogResult.No)
+                    {
+
+                        
+                        MessageBox.Show("Удаление отменено");
+
+                    }
+                    db.SaveChanges();
+
+
+                }
+
+
+           
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            
         }
-    }
 
+        private void pictureBox17_Click_1(object sender, EventArgs e)
+        {
+            using (UserContext db = new UserContext())
+            {
+                foreach (var VARIABLE in COLLECTION)
+                {
+                    
+                }
+                this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
+            }
+        }
+    }
 }
    // private void pictureBox11_Click(object sender, EventArgs e)
     
