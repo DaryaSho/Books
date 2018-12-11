@@ -46,35 +46,41 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userContextBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(307, 26);
+            this.textBox1.Location = new System.Drawing.Point(259, 190);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(164, 22);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(307, 59);
+            this.textBox2.Location = new System.Drawing.Point(259, 223);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.Size = new System.Drawing.Size(164, 22);
             this.textBox2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(183, 121);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(190, 273);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 34);
+            this.button1.Size = new System.Drawing.Size(217, 40);
             this.button1.TabIndex = 4;
             this.button1.Text = "Вход";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // openFileDialog1
@@ -83,7 +89,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(476, 204);
+            this.button2.Location = new System.Drawing.Point(27, 177);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(245, 42);
             this.button2.TabIndex = 9;
@@ -93,15 +99,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(620, 23);
+            this.textBox3.Location = new System.Drawing.Point(147, 7);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "v";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(620, 51);
+            this.textBox4.Location = new System.Drawing.Point(147, 35);
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(100, 22);
@@ -109,21 +114,21 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(620, 90);
+            this.textBox5.Location = new System.Drawing.Point(147, 74);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 12;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(620, 119);
+            this.textBox6.Location = new System.Drawing.Point(147, 105);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
             this.textBox6.TabIndex = 13;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(620, 152);
+            this.textBox7.Location = new System.Drawing.Point(147, 133);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
             this.textBox7.TabIndex = 14;
@@ -131,7 +136,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(183, 28);
+            this.metroLabel1.Location = new System.Drawing.Point(157, 192);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(48, 20);
             this.metroLabel1.TabIndex = 21;
@@ -140,7 +145,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(466, 23);
+            this.metroLabel3.Location = new System.Drawing.Point(40, 7);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(48, 20);
             this.metroLabel3.TabIndex = 23;
@@ -149,7 +154,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(183, 59);
+            this.metroLabel2.Location = new System.Drawing.Point(157, 223);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(57, 20);
             this.metroLabel2.TabIndex = 24;
@@ -158,7 +163,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(463, 62);
+            this.metroLabel4.Location = new System.Drawing.Point(37, 43);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(57, 20);
             this.metroLabel4.TabIndex = 25;
@@ -167,7 +172,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(463, 90);
+            this.metroLabel5.Location = new System.Drawing.Point(40, 76);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(42, 20);
             this.metroLabel5.TabIndex = 26;
@@ -176,7 +181,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(463, 121);
+            this.metroLabel6.Location = new System.Drawing.Point(37, 103);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(67, 20);
             this.metroLabel6.TabIndex = 27;
@@ -185,11 +190,21 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(463, 152);
+            this.metroLabel7.Location = new System.Drawing.Point(40, 135);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(49, 20);
             this.metroLabel7.TabIndex = 28;
             this.metroLabel7.Text = "Адрес";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::АРМ.Properties.Resources.user_4;
+            this.pictureBox1.Location = new System.Drawing.Point(211, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
             // 
             // userBindingSource
             // 
@@ -199,32 +214,59 @@
             // 
             this.userContextBindingSource.DataSource = typeof(АРМ.UserContext);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label1.Location = new System.Drawing.Point(187, 316);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Регистрация...";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.metroLabel6);
+            this.panel1.Controls.Add(this.metroLabel7);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.metroLabel3);
+            this.panel1.Controls.Add(this.metroLabel4);
+            this.panel1.Controls.Add(this.metroLabel5);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(157, 178);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 231);
+            this.panel1.TabIndex = 32;
+            this.panel1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 503);
-            this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
+            this.ClientSize = new System.Drawing.Size(578, 503);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userContextBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,6 +293,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
