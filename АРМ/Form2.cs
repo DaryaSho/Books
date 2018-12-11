@@ -483,14 +483,6 @@ namespace АРМ
             }
         }
 
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-         
-  
-
-            
-        }
-
         public string catB(int index) {
             using (UserContext db = new UserContext())
             {
@@ -697,25 +689,16 @@ namespace АРМ
 
         private void pictureBox17_Click_1(object sender, EventArgs e)
         {
-            using (UserContext db = new UserContext())
+           
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+             using (UserContext db = new UserContext())
             {
-                
                 foreach (Books books in db.Books)
                 {
                     int i = dataGridView2.Rows.Add();
-
-                    // string name = books.BookName;
-                    //string avttor = books.BookAvtor;
-                    //  string descript  = books.BookDescrip;
-                    //  string pub = pubB(books.PublicationId);
-                    // string styl = stylB(books.StyleId);
-                    // string pubYear = books.PublicatiomYear.ToString();
-                    // string categor = catB(books.CategorId);
-                    //string price = books.BookPrice.ToString();
-                    // Image image = new Bitmap(books.BookPhoto);
-
-                    // dataGridView1.Rows.Add(name, avttor, descript, pub, styl, pubYear, categor, price, image);
-
                     dataGridView2.Rows[i].Cells[0].Value = books.BookName;
                     dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
                     dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
@@ -725,19 +708,24 @@ namespace АРМ
                     dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
                     dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
                     dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
-
-
-                    //dataGridView1.Rows.Add(books.BookName, books.BookAvtor, books.BookDescrip,
-                    //    pubB(books.PublicationId), stylB(books.StyleId), books.PublicatiomYear.ToString(),
-                    //    catB(books.CategorId), books.BookPrice.ToString(), new Bitmap(books.BookPhoto));
-
                 }
-
             }
         }
 
-       
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+         
+            textBox1.Text = Convert.ToString( dataGridView2.CurrentRow.Cells[0].Value);
+            textBox2.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value);
+            textBox3.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[2].Value);
+            textBox8.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[7].Value);
+            textBox4.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[5].Value);
+            comboBox1.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[3].Value);
+            comboBox2.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[4].Value);
+            comboBox3.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[6].Value);
+            pictureBox13.Image =(Image)dataGridView2.CurrentRow.Cells[8].Value;
+    }
     }
 }
    // private void pictureBox11_Click(object sender, EventArgs e)
