@@ -28,13 +28,13 @@ namespace АРМ
             {
                 Books books = db.Books.First();
                 idbook= books.Id;
-                dataGridView1.DataSource = db.Users.Local.ToList();
+               
 
 
             }
            
            
-           this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
+           //this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
             addCombobox();
             ScrollAll();
 
@@ -464,9 +464,9 @@ namespace АРМ
                             BookDescrip = textBox3.Text,
                             BookPrice = Convert.ToInt32(textBox8.Text),
                             PublicatiomYear = Convert.ToInt32(textBox4.Text),
-                            PublicationId = comboBox1.FindString(comboBox1.Text) + 1,
-                            StyleId = comboBox2.FindString(comboBox2.Text) + 1,
-                            CategorId = comboBox3.FindString(comboBox3.Text) + 1,
+                            PublicationId = bPub(comboBox1.Text),
+                            StyleId = bstyl(comboBox2.Text),
+                            CategorId =bCat(comboBox3.Text),
                             BookPhoto = put,
                         });
                         db.SaveChanges();
@@ -488,7 +488,7 @@ namespace АРМ
          
   
 
-            //  write();
+            
         }
 
         public string catB(int index) {
@@ -502,6 +502,20 @@ namespace АРМ
 
                 return name;
             }
+        }
+
+        public int bCat(string name)
+        {
+            int index = 1;
+            using (UserContext db = new UserContext())
+            {
+                
+                foreach (Categor element in db.Categors)
+                {
+                    if (element.CategorName == name) index = element.Id;
+                }          
+            }
+            return index;
         }
 
 
@@ -519,6 +533,19 @@ namespace АРМ
             }
         }
 
+        public int bPub(string name)
+        {
+            using (UserContext db = new UserContext())
+            {
+                int index = 1;
+                foreach (Publication element in db.Publication)
+                {
+                    if (element.PublicatName == name) index = element.Id;
+                }
+                return index;
+            }
+        }
+
 
 
         public string stylB(int index)
@@ -530,13 +557,23 @@ namespace АРМ
                 {
                     if (element.Id == index) name = element.StyleName;
                 }
-
                 return name;
             }
         }
 
 
-
+        public int bstyl(string name)
+        {
+            using (UserContext db = new UserContext())
+            {
+                int index = 1;
+                foreach (Style element in db.Styles)
+                {
+                    if (element.StyleName == name) index = element.Id;
+                }
+                return index;
+            }
+        }
 
 
 
@@ -651,8 +688,6 @@ namespace АРМ
                 }
 
 
-           
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -664,13 +699,45 @@ namespace АРМ
         {
             using (UserContext db = new UserContext())
             {
-                foreach (var VARIABLE in COLLECTION)
+                
+                foreach (Books books in db.Books)
                 {
-                    
+                    int i = dataGridView2.Rows.Add();
+
+                    // string name = books.BookName;
+                    //string avttor = books.BookAvtor;
+                    //  string descript  = books.BookDescrip;
+                    //  string pub = pubB(books.PublicationId);
+                    // string styl = stylB(books.StyleId);
+                    // string pubYear = books.PublicatiomYear.ToString();
+                    // string categor = catB(books.CategorId);
+                    //string price = books.BookPrice.ToString();
+                    // Image image = new Bitmap(books.BookPhoto);
+
+                    // dataGridView1.Rows.Add(name, avttor, descript, pub, styl, pubYear, categor, price, image);
+
+                    dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                    dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                    dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                    dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                    dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                    dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                    dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                    dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                    dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+
+
+                    //dataGridView1.Rows.Add(books.BookName, books.BookAvtor, books.BookDescrip,
+                    //    pubB(books.PublicationId), stylB(books.StyleId), books.PublicatiomYear.ToString(),
+                    //    catB(books.CategorId), books.BookPrice.ToString(), new Bitmap(books.BookPhoto));
+
                 }
-                this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
+
             }
         }
+
+       
+
     }
 }
    // private void pictureBox11_Click(object sender, EventArgs e)
