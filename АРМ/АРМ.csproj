@@ -114,6 +114,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\Books.datasource" />
     <None Include="Properties\DataSources\User.datasource">
       <SubType>Designer</SubType>
     </None>
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\user-4.png" />
     <None Include="Resources\agenda.png" />
     <None Include="Resources\repeat-1.png" />
     <None Include="Resources\add.png" />
