@@ -37,6 +37,7 @@ namespace АРМ
            //this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
             addCombobox();
             ScrollAll();
+            showBooks();
 
 
         }
@@ -423,24 +424,30 @@ namespace АРМ
         public void addCombobox()
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.Clear();
+            comboBox3.Items.Clear();
             comboBox2.Items.Clear();
+            comboBox4.Items.Clear();
+            comboBox5.Items.Clear();
+            comboBox6.Items.Clear();
             using (UserContext db = new UserContext())
             {
 
                 foreach (Style style in db.Styles)
                 {
                     comboBox2.Items.Add(style.StyleName.ToString());
+                    comboBox5.Items.Add(style.StyleName.ToString());
                 }
 
                 foreach (Categor style in db.Categors)
                 {
                     comboBox3.Items.Add(style.CategorName.ToString());
+                    comboBox6.Items.Add(style.CategorName.ToString());
                 }
 
                 foreach (Publication style in db.Publication)
                 {
                     comboBox1.Items.Add(style.PublicatName.ToString());
+                    comboBox4.Items.Add(style.PublicatName.ToString());
                 }
             }
         }
@@ -693,21 +700,26 @@ namespace АРМ
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
+        {           
+                    showBooks();         
+        }
+
+        public void showBooks()
         {
-             using (UserContext db = new UserContext())
+            using (UserContext db = new UserContext())
             {
                 foreach (Books books in db.Books)
                 {
                     int i = dataGridView2.Rows.Add();
-                    dataGridView2.Rows[i].Cells[0].Value = books.BookName;
-                    dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
-                    dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
-                    dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
-                    dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
-                    dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
-                    dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
-                    dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
-                    dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                     dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                     dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                     dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                     dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                     dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                     dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                     dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                     dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                     dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
                 }
             }
         }
@@ -726,6 +738,151 @@ namespace АРМ
             comboBox3.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[6].Value);
             pictureBox13.Image =(Image)dataGridView2.CurrentRow.Cells[8].Value;
     }
+
+        private void metroLabel18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox10.Text == "") textBox5.BackColor = Color.LightGray;
+            else textBox10.BackColor = Color.White;
+            AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
+            auto.Clear();
+            using (UserContext db = new UserContext())
+            {
+
+                foreach (Books books in db.Books)
+                {
+                    auto.Add(books.BookName);
+                    auto.Add(books.BookAvtor);
+                }
+
+               
+            }
+
+            textBox10.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBox10.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            textBox10.AutoCompleteCustomSource = auto;
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+            using (UserContext db = new UserContext())
+            {
+                dataGridView2.Rows.Clear();
+                
+                foreach (Books books in db.Books)
+                {
+                    if (books.BookName == textBox10.Text || books.BookAvtor == textBox10.Text)
+                    {
+                        int i = dataGridView2.Rows.Add();
+                        dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                        dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                        dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                        dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                        dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                        dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                        dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                        dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                        dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                    }
+                }
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.Multiline = true;
+            // Add vertical scroll bars to the TextBox control.
+            textBox3.ScrollBars = ScrollBars.Vertical;
+            // Allow the TAB key to be entered in the TextBox control.
+            textBox3.AcceptsReturn = true;
+            // Allow the TAB key to be entered in the TextBox control.
+            textBox3.AcceptsTab = true;
+            textBox3.SelectionStart = textBox3.Text.Length;
+            textBox3.ScrollToCaret();
+            textBox3.Refresh();
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showBookComboBox(1);
+        }
+
+        public void showBookComboBox(int index)
+        {
+            using (UserContext db = new UserContext())
+            {
+                dataGridView2.Rows.Clear();
+
+                foreach (Books books in db.Books)
+                {
+                    if (index == 1)
+                    {
+                        if (books.PublicationId== bPub(comboBox4.Text))
+                        {
+                            int i = dataGridView2.Rows.Add();
+                            dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                            dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                            dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                            dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                            dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                            dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                            dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                            dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                            dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                        }
+                    }
+
+                    if (index == 2)
+                    {
+                        if (books.StyleId == bstyl(comboBox5.Text))
+                        {
+                            int i = dataGridView2.Rows.Add();
+                            dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                            dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                            dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                            dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                            dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                            dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                            dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                            dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                            dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                        }
+                    }
+
+                    if (index == 3)
+                    {
+                        if (books.CategorId == bCat(comboBox6.Text))
+                        {
+                            int i = dataGridView2.Rows.Add();
+                            dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                            dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                            dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                            dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                            dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                            dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                            dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                            dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                            dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showBookComboBox(2);
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showBookComboBox(3);
+        }
     }
 }
    // private void pictureBox11_Click(object sender, EventArgs e)
