@@ -46,15 +46,15 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userContextBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -145,7 +145,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(40, 7);
+            this.metroLabel3.Location = new System.Drawing.Point(37, 7);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(48, 20);
             this.metroLabel3.TabIndex = 23;
@@ -196,24 +196,6 @@
             this.metroLabel7.TabIndex = 28;
             this.metroLabel7.Text = "Адрес";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::АРМ.Properties.Resources.user_4;
-            this.pictureBox1.Location = new System.Drawing.Point(211, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(АРМ.User);
-            // 
-            // userContextBindingSource
-            // 
-            this.userContextBindingSource.DataSource = typeof(АРМ.UserContext);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -246,11 +228,29 @@
             this.panel1.TabIndex = 32;
             this.panel1.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::АРМ.Properties.Resources.user_4;
+            this.pictureBox1.Location = new System.Drawing.Point(211, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(АРМ.User);
+            // 
+            // userContextBindingSource
+            // 
+            this.userContextBindingSource.DataSource = typeof(АРМ.UserContext);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 503);
+            this.ClientSize = new System.Drawing.Size(605, 503);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -260,13 +260,14 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
+            this.Style = MetroFramework.MetroColorStyle.Blue;
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userContextBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

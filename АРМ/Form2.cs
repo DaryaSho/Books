@@ -795,11 +795,8 @@ namespace АРМ
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             textBox3.Multiline = true;
-            // Add vertical scroll bars to the TextBox control.
             textBox3.ScrollBars = ScrollBars.Vertical;
-            // Allow the TAB key to be entered in the TextBox control.
             textBox3.AcceptsReturn = true;
-            // Allow the TAB key to be entered in the TextBox control.
             textBox3.AcceptsTab = true;
             textBox3.SelectionStart = textBox3.Text.Length;
             textBox3.ScrollToCaret();
@@ -882,6 +879,46 @@ namespace АРМ
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
             showBookComboBox(3);
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+            groupBox2.Visible = false;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.SkyBlue;
+            button1.ForeColor = Color.Black;
+        }
+
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            button1.BackColor = Color.Red;
+            button1.ForeColor = Color.White;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+            groupBox2.Visible = false;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+            groupBox2.Visible = true;
         }
     }
 }

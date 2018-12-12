@@ -136,6 +136,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\checked-1.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\garbage-1.png" />
+    <None Include="Resources\binoculars.png" />
+    <None Include="Resources\archive.png" />
+    <None Include="Resources\search-1.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\user-4.png" />
     <None Include="Resources\agenda.png" />
