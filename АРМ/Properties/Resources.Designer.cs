@@ -133,6 +133,16 @@ namespace АРМ.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap binoculars1 {
+            get {
+                object obj = ResourceManager.GetObject("binoculars1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checked_1 {
             get {
                 object obj = ResourceManager.GetObject("checked-1", resourceCulture);
@@ -216,6 +226,26 @@ namespace АРМ.Properties {
         internal static System.Drawing.Bitmap user_4 {
             get {
                 object obj = ResourceManager.GetObject("user-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zoom_in {
+            get {
+                object obj = ResourceManager.GetObject("zoom-in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zoom_out {
+            get {
+                object obj = ResourceManager.GetObject("zoom-out", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
