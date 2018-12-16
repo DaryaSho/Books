@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,7 @@ namespace АРМ
         public int Id { get; set; }
         public int BookId { get; set; }
         public int BookCount { get; set; }
+        public DateTime DataBook { get; set; }
 
     }
 }
