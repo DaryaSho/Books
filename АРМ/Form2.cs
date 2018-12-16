@@ -36,7 +36,7 @@ namespace АРМ
            
            //this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
             addCombobox();
-            ScrollAll();
+            //ScrollAll();
             showBooks();
 
 
@@ -577,19 +577,37 @@ namespace АРМ
 
 
 
-
-
-        public void write()
+        public int iBooks(string name, string avtor, int pubyear, int publiicat)
         {
-
-
+            int index = 0;
+            using (UserContext db = new UserContext())
+            {
+              
+                foreach (Books element in db.Books)
+                {
+                    if ((element.BookName== name) && (element.BookAvtor==avtor) && (element.PublicationId==publiicat) && (element.PublicatiomYear==pubyear)) index = element.Id;
+                }
+               
+            }
+            return index;
         }
-        public void writeBooks(string bookName, string bookAvtor, string bookPhoto, string bookDescrip, int Yaer, int bookPrise, string bookStyle, string bookCategor, string bookPublic)
+
+        public int CaunBook(int id)
         {
+            int index = 0;
+            using (UserContext db = new UserContext())
+            {
 
-
-            // metroPanel1.Controls.Add(groupBox1);
+                foreach (Stock element in db.Stocks)
+                {
+                    if (element.BookId ==id )  index = element.BookCount;
+                }
+                return index;
+            }
+            return index;
         }
+
+       
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
@@ -612,48 +630,14 @@ namespace АРМ
             textBox7.Refresh();
         }
 
-        private void metroScrollBar1_Scroll_1(object sender, ScrollEventArgs e)
-        {
-            ScrollAll();
-           
-           
-        }
+  
 
 
-        public void ScrollAll()
-        {
-            using (UserContext db = new UserContext())
-            {
-                Books books = new Books();
-                if (idbook > db.Books.Count()) {
-                    books = db.Books.First();
-                    idbook = books.Id;
-                }
-                //books = db.Books.Find();
-                 books = db.Books.Find(idbook+1);
-                    {
-                        pictureBox18.Image = new Bitmap(books.BookPhoto);
-                        label4.Text = books.BookName;
-                        label5.Text = books.BookAvtor;
-                        label8.Text = stylB(books.StyleId);
-                        label9.Text = pubB(books.PublicationId);
-                        label13.Text = books.PublicatiomYear.ToString();
-                        label11.Text = catB(books.CategorId);
-                        label15.Text = books.BookPrice.ToString();
-                        textBox9.Text = books.BookDescrip;
-                        
-
-
-                    }
-               
-
-                idbook++;
-            }
-        }
+        
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы Книги " + label4.Text, "Удаление", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы Книги " , "Удаление", MessageBoxButtons.YesNo);
             
           
             
@@ -664,7 +648,7 @@ namespace АРМ
 
                         foreach (Books books in db.Books)
                         {
-                            if ((books.BookName == label4.Text)&&(books.BookAvtor==label5.Text)&&(pubB(books.PublicationId)==label9.Text))
+                            if ((books.BookName == textBox1.Text)&&(books.BookAvtor==textBox2.Text)&&(pubB(books.PublicationId)==comboBox1.Text))
                             {
                                 db.Books.Remove(books);
                                 MessageBox.Show("Удаление прошло успешно");
@@ -689,19 +673,12 @@ namespace АРМ
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
-        private void pictureBox17_Click_1(object sender, EventArgs e)
-        {
-           
-        }
+       
 
         private void pictureBox19_Click(object sender, EventArgs e)
-        {           
-                    showBooks();         
+        {
+            dataGridView2.Rows.Clear();
+            showBooks();         
         }
 
         public void showBooks()
@@ -883,45 +860,200 @@ namespace АРМ
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = true;
-            groupBox2.Visible = false;
+            DialogResult dialogResult = MessageBox.Show("Изменить  книгу ", "Изменение", MessageBoxButtons.YesNo);
+            if (!Check(textBox1) || !Check(textBox2) || !Check(textBox3) || !Check(textBox4) || !Check(textBox8)
+                || comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "") MessageBox.Show("Заполните поля");
+
+            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2) && Check(textBox3) && Check(textBox4) && Check(textBox8)))
+            {
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (UserContext db = new UserContext())
+                    {
+                        foreach (Books books in db.Books)
+                        {
+                            if ((books.BookName == label4.Text) && (books.BookAvtor == label5.Text) && (pubB(books.PublicationId) == label9.Text))
+                            {
+                                db.Books.Remove(books);
+                              
+                            }
+
+                        }
+                        db.Books.Add(new Books
+                        {
+                            BookName = textBox1.Text,
+                            BookAvtor = textBox2.Text,
+                            BookDescrip = textBox3.Text,
+                            BookPrice = Convert.ToInt32(textBox8.Text),
+                            PublicatiomYear = Convert.ToInt32(textBox4.Text),
+                            PublicationId = bPub(comboBox1.Text),
+                            StyleId = bstyl(comboBox2.Text),
+                            CategorId = bCat(comboBox3.Text),
+                            BookPhoto = put,
+                        });
+                        db.SaveChanges();
+
+
+                    }
+                    MessageBox.Show("Изменение прошло успешно! с=");
+                }
+                else MessageBox.Show("Изменение отменено.");
+
+                cleartextBox();
+
+
+            }
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
+      
+
+       
+
+     
+
+      
+
+      
+
+       
+
+        private void pictureBox13_MouseHover(object sender, EventArgs e)
+        {
+            metroToolTip1.SetToolTip(pictureBox13, "Нажмите на картинку, чтобы добавить картинку для книги");
+        }
+
+        private void pictureBox14_MouseHover(object sender, EventArgs e)
+        {
+            metroToolTip1.SetToolTip(pictureBox14, "Добавить книгу");
+        }
+
+        private void pictureBox27_Click(object sender, EventArgs e)
+        {
+            label26.Text = textBox1.Text;
+            label27.Text = textBox2.Text;
+            textBox18.Text = textBox3.Text;
+            label29.Text = comboBox1.Text;
+            label30.Text = comboBox2.Text;
+            label31.Text = comboBox3.Text;
+            panel1.Visible = true;
+            panel1.Dock = DockStyle.Fill;
+            pictureBox28.Image = pictureBox13.Image;
+        }
+
+        private void pictureBox29_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void textBox18_TextChanged(object sender, EventArgs e)
+        {
+            textBox18.Multiline = true;
+            textBox18.ScrollBars = ScrollBars.Vertical;
+            textBox18.AcceptsReturn = true;
+            textBox18.AcceptsTab = true;
+            textBox18.SelectionStart = textBox18.Text.Length;
+            textBox18.ScrollToCaret();
+            textBox18.Refresh();
+        }
+
+        private void pictureBox23_Click(object sender, EventArgs e)
         {
             
+            DialogResult dialogResult = MessageBox.Show("Добавить книгу в склад", "Добавление", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                
+                  
+              
+                if (Check(textBox15) && Check(textBox1) && Check(textBox2))
+                {
+
+                    if (Convert.ToInt32(textBox15.Text) > 0)
+                    {
+                        using (UserContext db = new UserContext())
+                        {
+
+                            db.Stocks.Add(new Stock()
+                            {
+                                BookId = iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text),
+                                    bPub(comboBox1.Text)),
+                                BookCount = Convert.ToInt32(textBox15.Text),
+                                DataBook = dateTimePicker2.Value
+                            });
+                            db.SaveChanges();
+                            MessageBox.Show("Добавление прошло успешно");
+                        }
+                    }
+                    else MessageBox.Show("ОШИБКА! Неправильно введено количество!");
+
+                }
+                else MessageBox.Show("ОШИБКА! Не выбрана книга или неправильно введено количество!");
+            }
+
+            if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Вы отменили добавление");
+            }
+
+
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
+        private void pictureBox26_Click(object sender, EventArgs e)
         {
-            button1.BackColor = Color.SkyBlue;
-            button1.ForeColor = Color.Black;
-        }
+            DialogResult dialogResult = MessageBox.Show("Добавить книгу в потери", "Добавление", MessageBoxButtons.YesNo);
 
-        private void button1_MouseMove(object sender, MouseEventArgs e)
-        {
-            
-        }
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (Check(textBox16) && Check(textBox1) && Check(textBox2)&& (Check(textBox17)))
+                {
 
-        private void button1_MouseUp(object sender, MouseEventArgs e)
-        {
-            button1.BackColor = Color.Red;
-            button1.ForeColor = Color.White;
-        }
+                    if (Convert.ToInt32(textBox17.Text) > 0)
+                    {
+                        using (UserContext db = new UserContext())
+                        {
+                            int caunt = 0;
+                            foreach (Stock stock in db.Stocks)
+                            {
+                                if (stock.BookId == iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text), bPub(comboBox1.Text)))
+                                caunt += stock.BookCount;
+                                db.Stocks.Remove(stock);
+                            }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            groupBox1.Visible = true;
-            groupBox2.Visible = false;
-        }
+                            if( caunt - Convert.ToInt32(textBox17.Text) >= 0){
+                                db.Losses.Add(new Losses()
+                                {
+                                    BookId = iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text),
+                                        bPub(comboBox1.Text)),
+                                    BookCount = Convert.ToInt32(textBox17.Text),
+                                    Why = textBox16.Text
+                                });
+                                db.Stocks.Add(new Stock()
+                                {
+                                    BookId = iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text), bPub(comboBox1.Text)),
+                                    BookCount = caunt - Convert.ToInt32(textBox17.Text), 
+                                    DataBook =  DateTime.Now
+                                });
+                                db.SaveChanges();
+                                MessageBox.Show("Добавление прошло успешно");
+                            }
+                            else MessageBox.Show("Нет такого количество на складе!");
+                        }
+                    }
+                    else MessageBox.Show("ОШИБКА! Неправильно введено количество!");
 
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            groupBox1.Visible = false;
-            groupBox2.Visible = true;
+                }
+                else MessageBox.Show("ОШИБКА! Не выбрана книга или не заполнены поля!");
+            }
+
+            if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Вы отменили добавление");
+            }
         }
     }
 }
+
    // private void pictureBox11_Click(object sender, EventArgs e)
     
 

@@ -32,9 +32,34 @@
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -46,12 +71,23 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +99,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.caunt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -91,6 +128,18 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
@@ -108,9 +157,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.metroScrollBar1 = new MetroFramework.Controls.MetroScrollBar();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,62 +171,42 @@
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.label28 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.booksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.metroTabPage4.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.metroTabPage5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.metroTabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            this.metroTabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.metroTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -190,7 +219,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.metroTabPage5.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.metroTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userContextBindingSource)).BeginInit();
@@ -207,7 +242,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(23, 22);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(1115, 566);
+            this.metroTabControl1.Size = new System.Drawing.Size(1115, 594);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -219,7 +254,7 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1107, 523);
+            this.metroTabPage1.Size = new System.Drawing.Size(1107, 551);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Главная";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -234,6 +269,16 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "label16";
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.White;
+            this.pictureBox17.Location = new System.Drawing.Point(3, 13);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(181, 189);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 3;
+            this.pictureBox17.TabStop = false;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(816, 13);
@@ -243,16 +288,16 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.button3);
-            this.metroTabPage2.Controls.Add(this.button2);
-            this.metroTabPage2.Controls.Add(this.button1);
-            this.metroTabPage2.Controls.Add(this.groupBox1);
+            this.metroTabPage2.Controls.Add(this.panel1);
+            this.metroTabPage2.Controls.Add(this.pictureBox27);
             this.metroTabPage2.Controls.Add(this.pictureBox19);
+            this.metroTabPage2.Controls.Add(this.pictureBox16);
+            this.metroTabPage2.Controls.Add(this.pictureBox13);
+            this.metroTabPage2.Controls.Add(this.tabControl1);
+            this.metroTabPage2.Controls.Add(this.pictureBox15);
             this.metroTabPage2.Controls.Add(this.dataGridView2);
             this.metroTabPage2.Controls.Add(this.pictureBox14);
-            this.metroTabPage2.Controls.Add(this.pictureBox15);
             this.metroTabPage2.Controls.Add(this.textBox8);
-            this.metroTabPage2.Controls.Add(this.pictureBox16);
             this.metroTabPage2.Controls.Add(this.metroLabel13);
             this.metroTabPage2.Controls.Add(this.comboBox3);
             this.metroTabPage2.Controls.Add(this.comboBox2);
@@ -268,19 +313,262 @@
             this.metroTabPage2.Controls.Add(this.metroLabel2);
             this.metroTabPage2.Controls.Add(this.metroLabel1);
             this.metroTabPage2.Controls.Add(this.textBox1);
-            this.metroTabPage2.Controls.Add(this.pictureBox13);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1107, 523);
+            this.metroTabPage2.Size = new System.Drawing.Size(1107, 551);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Книги";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox18);
+            this.panel1.Controls.Add(this.pictureBox29);
+            this.panel1.Controls.Add(this.label31);
+            this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.pictureBox28);
+            this.panel1.Location = new System.Drawing.Point(304, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(51, 89);
+            this.panel1.TabIndex = 36;
+            this.panel1.Visible = false;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox18.Location = new System.Drawing.Point(655, 112);
+            this.textBox18.Multiline = true;
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(440, 283);
+            this.textBox18.TabIndex = 8;
+            this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = global::АРМ.Properties.Resources.zoom_out;
+            this.pictureBox29.Location = new System.Drawing.Point(1055, 498);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox29.TabIndex = 7;
+            this.pictureBox29.TabStop = false;
+            this.pictureBox29.Click += new System.EventHandler(this.pictureBox29_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(652, 432);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(51, 20);
+            this.label31.TabIndex = 6;
+            this.label31.Text = "Стиь";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Location = new System.Drawing.Point(652, 467);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(130, 20);
+            this.label30.TabIndex = 5;
+            this.label30.Text = "Издательсвто";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(652, 497);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(96, 20);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "категория";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(651, 68);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(94, 32);
+            this.label27.TabIndex = 2;
+            this.label27.Text = "Автор";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(650, 27);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(166, 38);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Название";
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Location = new System.Drawing.Point(20, 6);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(615, 508);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox28.TabIndex = 0;
+            this.pictureBox28.TabStop = false;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.White;
+            this.pictureBox27.Image = global::АРМ.Properties.Resources.zoom_in;
+            this.pictureBox27.Location = new System.Drawing.Point(1049, 489);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox27.TabIndex = 12;
+            this.pictureBox27.TabStop = false;
+            this.pictureBox27.Click += new System.EventHandler(this.pictureBox27_Click);
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.Color.White;
+            this.pictureBox19.Image = global::АРМ.Properties.Resources.repeat_1;
+            this.pictureBox19.Location = new System.Drawing.Point(1003, 489);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 29;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.White;
+            this.pictureBox16.Image = global::АРМ.Properties.Resources.edit;
+            this.pictureBox16.Location = new System.Drawing.Point(957, 489);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 23;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.White;
+            this.pictureBox13.Image = global::АРМ.Properties.Resources.agenda;
+            this.pictureBox13.Location = new System.Drawing.Point(865, 233);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(199, 244);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 20;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            this.pictureBox13.MouseHover += new System.EventHandler(this.pictureBox13_MouseHover);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(3, 209);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(497, 328);
+            this.tabControl1.TabIndex = 35;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(489, 299);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Cклад";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.pictureBox24);
+            this.groupBox2.Controls.Add(this.pictureBox23);
+            this.groupBox2.Controls.Add(this.textBox15);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Location = new System.Drawing.Point(29, 8);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(439, 285);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = global::АРМ.Properties.Resources.archive;
+            this.pictureBox24.Location = new System.Drawing.Point(100, 21);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(267, 132);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox24.TabIndex = 4;
+            this.pictureBox24.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.BackColor = System.Drawing.Color.White;
+            this.pictureBox23.Image = global::АРМ.Properties.Resources.add_1;
+            this.pictureBox23.Location = new System.Drawing.Point(349, 195);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 3;
+            this.pictureBox23.TabStop = false;
+            this.pictureBox23.Click += new System.EventHandler(this.pictureBox23_Click);
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(120, 184);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(199, 22);
+            this.textBox15.TabIndex = 2;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 187);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(86, 17);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "Количество";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(10, 248);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(369, 17);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "* Выберите в таблице книгу,чтобы добавить в склады.";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(489, 299);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Поиск";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.pictureBox22);
             this.groupBox1.Controls.Add(this.pictureBox21);
             this.groupBox1.Controls.Add(this.label20);
@@ -301,12 +589,31 @@
             this.groupBox1.Controls.Add(this.metroLabel15);
             this.groupBox1.Controls.Add(this.metroLabel14);
             this.groupBox1.Controls.Add(this.metroLabel16);
-            this.groupBox1.Location = new System.Drawing.Point(3, 203);
+            this.groupBox1.Location = new System.Drawing.Point(12, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(503, 255);
+            this.groupBox1.Size = new System.Drawing.Size(456, 229);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Сортировка";
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::АРМ.Properties.Resources.search_1;
+            this.pictureBox22.Location = new System.Drawing.Point(366, 189);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(24, 22);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 33;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::АРМ.Properties.Resources.search_1;
+            this.pictureBox21.Location = new System.Drawing.Point(366, 161);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(24, 22);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox21.TabIndex = 32;
+            this.pictureBox21.TabStop = false;
             // 
             // label20
             // 
@@ -399,6 +706,17 @@
             this.comboBox4.TabIndex = 21;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::АРМ.Properties.Resources.search;
+            this.pictureBox20.Location = new System.Drawing.Point(377, 27);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox20.TabIndex = 20;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
+            // 
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
@@ -412,7 +730,7 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(13, 169);
+            this.metroLabel17.Location = new System.Drawing.Point(13, 163);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(43, 20);
             this.metroLabel17.TabIndex = 18;
@@ -453,6 +771,109 @@
             this.metroLabel16.Size = new System.Drawing.Size(74, 20);
             this.metroLabel16.TabIndex = 16;
             this.metroLabel16.Text = "Категория";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(489, 299);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Потери";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.pictureBox26);
+            this.groupBox3.Controls.Add(this.textBox17);
+            this.groupBox3.Controls.Add(this.label25);
+            this.groupBox3.Controls.Add(this.pictureBox25);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.textBox16);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(477, 287);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::АРМ.Properties.Resources.add_1;
+            this.pictureBox26.Location = new System.Drawing.Point(344, 215);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox26.TabIndex = 11;
+            this.pictureBox26.TabStop = false;
+            this.pictureBox26.Click += new System.EventHandler(this.pictureBox26_Click);
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(111, 219);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(225, 22);
+            this.textBox17.TabIndex = 10;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(16, 224);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(86, 17);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Количество";
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.BackColor = System.Drawing.Color.White;
+            this.pictureBox25.Image = global::АРМ.Properties.Resources.garbage_1;
+            this.pictureBox25.Location = new System.Drawing.Point(342, 12);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(129, 115);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox25.TabIndex = 8;
+            this.pictureBox25.TabStop = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.Red;
+            this.label24.Location = new System.Drawing.Point(16, 258);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(368, 17);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "* Выберите в таблице книгу,чтобы добавить в потери.";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(111, 80);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(225, 129);
+            this.textBox16.TabIndex = 7;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(16, 77);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(66, 17);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "Причина";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.White;
+            this.pictureBox15.Image = global::АРМ.Properties.Resources.garbage_2;
+            this.pictureBox15.Location = new System.Drawing.Point(911, 489);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 22;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
             // dataGridView2
             // 
@@ -541,9 +962,22 @@
             this.caunt.Name = "caunt";
             this.caunt.ReadOnly = true;
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.White;
+            this.pictureBox14.Image = global::АРМ.Properties.Resources.add_1;
+            this.pictureBox14.Location = new System.Drawing.Point(865, 489);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 21;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            this.pictureBox14.MouseHover += new System.EventHandler(this.pictureBox14_MouseHover);
+            // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(872, 396);
+            this.textBox8.Location = new System.Drawing.Point(668, 429);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(180, 22);
             this.textBox8.TabIndex = 26;
@@ -551,7 +985,7 @@
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(745, 396);
+            this.metroLabel13.Location = new System.Drawing.Point(541, 429);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(43, 20);
             this.metroLabel13.TabIndex = 25;
@@ -560,7 +994,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(873, 484);
+            this.comboBox3.Location = new System.Drawing.Point(669, 517);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(179, 24);
             this.comboBox3.TabIndex = 19;
@@ -568,7 +1002,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(873, 454);
+            this.comboBox2.Location = new System.Drawing.Point(669, 487);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(179, 24);
             this.comboBox2.TabIndex = 18;
@@ -576,7 +1010,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(873, 424);
+            this.comboBox1.Location = new System.Drawing.Point(669, 457);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(179, 24);
             this.comboBox1.TabIndex = 17;
@@ -584,7 +1018,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(745, 484);
+            this.metroLabel7.Location = new System.Drawing.Point(541, 517);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(74, 20);
             this.metroLabel7.TabIndex = 16;
@@ -593,7 +1027,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(745, 454);
+            this.metroLabel6.Location = new System.Drawing.Point(541, 487);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(44, 20);
             this.metroLabel6.TabIndex = 15;
@@ -602,7 +1036,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(745, 424);
+            this.metroLabel5.Location = new System.Drawing.Point(541, 457);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(99, 20);
             this.metroLabel5.TabIndex = 14;
@@ -610,14 +1044,14 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(870, 368);
+            this.textBox4.Location = new System.Drawing.Point(666, 401);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(180, 22);
             this.textBox4.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(870, 256);
+            this.textBox3.Location = new System.Drawing.Point(666, 289);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(180, 106);
@@ -626,7 +1060,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(870, 228);
+            this.textBox2.Location = new System.Drawing.Point(666, 261);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 22);
             this.textBox2.TabIndex = 8;
@@ -634,7 +1068,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(745, 370);
+            this.metroLabel4.Location = new System.Drawing.Point(541, 403);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(122, 20);
             this.metroLabel4.TabIndex = 7;
@@ -643,7 +1077,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(742, 256);
+            this.metroLabel3.Location = new System.Drawing.Point(538, 289);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(74, 20);
             this.metroLabel3.TabIndex = 6;
@@ -652,7 +1086,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(742, 230);
+            this.metroLabel2.Location = new System.Drawing.Point(538, 263);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(47, 20);
             this.metroLabel2.TabIndex = 5;
@@ -661,7 +1095,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(742, 200);
+            this.metroLabel1.Location = new System.Drawing.Point(538, 233);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(71, 20);
             this.metroLabel1.TabIndex = 4;
@@ -669,7 +1103,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(870, 200);
+            this.textBox1.Location = new System.Drawing.Point(666, 233);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 22);
             this.textBox1.TabIndex = 3;
@@ -703,9 +1137,9 @@
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(1107, 523);
+            this.metroTabPage4.Size = new System.Drawing.Size(1107, 551);
             this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "ИНформация";
+            this.metroTabPage4.Text = "Информация";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
             // 
             // label3
@@ -811,13 +1245,160 @@
             this.textBox5.TabIndex = 2;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.White;
+            this.pictureBox9.Image = global::АРМ.Properties.Resources.repeat_1;
+            this.pictureBox9.Location = new System.Drawing.Point(257, 297);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 22;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
+            this.pictureBox10.Image = global::АРМ.Properties.Resources.edit;
+            this.pictureBox10.Location = new System.Drawing.Point(211, 296);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 21;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.White;
+            this.pictureBox11.Image = global::АРМ.Properties.Resources.garbage_2;
+            this.pictureBox11.Location = new System.Drawing.Point(165, 296);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 20;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.White;
+            this.pictureBox12.Image = global::АРМ.Properties.Resources.add_1;
+            this.pictureBox12.Location = new System.Drawing.Point(118, 296);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 19;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Tag = "3";
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.White;
+            this.pictureBox7.Image = global::АРМ.Properties.Resources.repeat_1;
+            this.pictureBox7.Location = new System.Drawing.Point(257, 250);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.Image = global::АРМ.Properties.Resources.repeat_1;
+            this.pictureBox8.Location = new System.Drawing.Point(257, 204);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::АРМ.Properties.Resources.edit;
+            this.pictureBox5.Location = new System.Drawing.Point(211, 249);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.Image = global::АРМ.Properties.Resources.edit;
+            this.pictureBox6.Location = new System.Drawing.Point(211, 204);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::АРМ.Properties.Resources.garbage_2;
+            this.pictureBox3.Location = new System.Drawing.Point(165, 249);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::АРМ.Properties.Resources.garbage_2;
+            this.pictureBox4.Location = new System.Drawing.Point(165, 204);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::АРМ.Properties.Resources.add_1;
+            this.pictureBox2.Location = new System.Drawing.Point(118, 249);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "2";
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::АРМ.Properties.Resources.add_1;
+            this.pictureBox1.Location = new System.Drawing.Point(118, 204);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "1";
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.dataGridView1);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(1107, 523);
+            this.metroTabPage3.Size = new System.Drawing.Size(1107, 551);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Работники";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
@@ -837,7 +1418,7 @@
             this.metroTabPage5.HorizontalScrollbarBarColor = true;
             this.metroTabPage5.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1107, 523);
+            this.metroTabPage5.Size = new System.Drawing.Size(1107, 551);
             this.metroTabPage5.TabIndex = 4;
             this.metroTabPage5.Text = "metroTabPage5";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
@@ -989,6 +1570,15 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "label4";
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(201, 237);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 1;
+            this.pictureBox18.TabStop = false;
+            // 
             // metroScrollBar1
             // 
             this.metroScrollBar1.Location = new System.Drawing.Point(664, 3);
@@ -996,7 +1586,6 @@
             this.metroScrollBar1.Orientation = MetroFramework.Controls.MetroScrollOrientation.Vertical;
             this.metroScrollBar1.Size = new System.Drawing.Size(10, 250);
             this.metroScrollBar1.TabIndex = 0;
-            this.metroScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.metroScrollBar1_Scroll_1);
             // 
             // metroTabPage6
             // 
@@ -1004,14 +1593,10 @@
             this.metroTabPage6.HorizontalScrollbarBarColor = true;
             this.metroTabPage6.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(1107, 523);
+            this.metroTabPage6.Size = new System.Drawing.Size(1107, 551);
             this.metroTabPage6.TabIndex = 5;
             this.metroTabPage6.Text = "Продажи";
             this.metroTabPage6.VerticalScrollbarBarColor = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // dataGridView3
             // 
@@ -1100,351 +1685,25 @@
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             this.dataGridViewTextBoxColumn17.ReadOnly = true;
             // 
-            // groupBox2
+            // openFileDialog1
             // 
-            this.groupBox2.Controls.Add(this.pictureBox26);
-            this.groupBox2.Controls.Add(this.textBox15);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Location = new System.Drawing.Point(0, -3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(509, 254);
-            this.groupBox2.TabIndex = 34;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Склад";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label21
+            // label28
             // 
-            this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(10, 215);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(369, 17);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "* Выберите в таблице книгу,чтобы добавить в склады.";
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 222);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(42, 17);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Дата";
             // 
-            // label22
+            // dateTimePicker2
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(10, 33);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(86, 17);
-            this.label22.TabIndex = 1;
-            this.label22.Text = "Количество";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(107, 28);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(193, 22);
-            this.textBox15.TabIndex = 2;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.White;
-            this.pictureBox17.Location = new System.Drawing.Point(3, 13);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(181, 189);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 3;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = global::АРМ.Properties.Resources.checked_1;
-            this.pictureBox26.Location = new System.Drawing.Point(107, 64);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(93, 64);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox26.TabIndex = 3;
-            this.pictureBox26.TabStop = false;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = global::АРМ.Properties.Resources.search_1;
-            this.pictureBox22.Location = new System.Drawing.Point(366, 189);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(24, 22);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox22.TabIndex = 33;
-            this.pictureBox22.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = global::АРМ.Properties.Resources.search_1;
-            this.pictureBox21.Location = new System.Drawing.Point(366, 161);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(24, 22);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox21.TabIndex = 32;
-            this.pictureBox21.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::АРМ.Properties.Resources.search;
-            this.pictureBox20.Location = new System.Drawing.Point(377, 27);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(24, 27);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox20.TabIndex = 20;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackColor = System.Drawing.Color.White;
-            this.pictureBox19.Image = global::АРМ.Properties.Resources.repeat_1;
-            this.pictureBox19.Location = new System.Drawing.Point(656, 450);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 29;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.White;
-            this.pictureBox14.Image = global::АРМ.Properties.Resources.add_1;
-            this.pictureBox14.Location = new System.Drawing.Point(518, 452);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 21;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.White;
-            this.pictureBox15.Image = global::АРМ.Properties.Resources.garbage_2;
-            this.pictureBox15.Location = new System.Drawing.Point(564, 452);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 22;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.White;
-            this.pictureBox16.Image = global::АРМ.Properties.Resources.edit;
-            this.pictureBox16.Location = new System.Drawing.Point(610, 452);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 23;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.White;
-            this.pictureBox13.Image = global::АРМ.Properties.Resources.agenda;
-            this.pictureBox13.Location = new System.Drawing.Point(512, 200);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(199, 244);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 20;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.White;
-            this.pictureBox9.Image = global::АРМ.Properties.Resources.repeat_1;
-            this.pictureBox9.Location = new System.Drawing.Point(257, 297);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 22;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.Image = global::АРМ.Properties.Resources.edit;
-            this.pictureBox10.Location = new System.Drawing.Point(211, 296);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 21;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.White;
-            this.pictureBox11.Image = global::АРМ.Properties.Resources.garbage_2;
-            this.pictureBox11.Location = new System.Drawing.Point(165, 296);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 20;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.White;
-            this.pictureBox12.Image = global::АРМ.Properties.Resources.add_1;
-            this.pictureBox12.Location = new System.Drawing.Point(118, 296);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 19;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Tag = "3";
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.White;
-            this.pictureBox7.Image = global::АРМ.Properties.Resources.repeat_1;
-            this.pictureBox7.Location = new System.Drawing.Point(257, 250);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.White;
-            this.pictureBox8.Image = global::АРМ.Properties.Resources.repeat_1;
-            this.pictureBox8.Location = new System.Drawing.Point(257, 204);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 15;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = global::АРМ.Properties.Resources.edit;
-            this.pictureBox5.Location = new System.Drawing.Point(211, 249);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 14;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.Image = global::АРМ.Properties.Resources.edit;
-            this.pictureBox6.Location = new System.Drawing.Point(211, 204);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::АРМ.Properties.Resources.garbage_2;
-            this.pictureBox3.Location = new System.Drawing.Point(165, 249);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::АРМ.Properties.Resources.garbage_2;
-            this.pictureBox4.Location = new System.Drawing.Point(165, 204);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::АРМ.Properties.Resources.add_1;
-            this.pictureBox2.Location = new System.Drawing.Point(118, 249);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "2";
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::АРМ.Properties.Resources.add_1;
-            this.pictureBox1.Location = new System.Drawing.Point(118, 204);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "1";
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Location = new System.Drawing.Point(13, 3);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(201, 237);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 1;
-            this.pictureBox18.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("a_Futurica", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(3, 464);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 50);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "СКЛАД";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
-            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(187, 464);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 50);
-            this.button2.TabIndex = 32;
-            this.button2.Tag = "";
-            this.button2.Text = "ПОИСК";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(381, 464);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 50);
-            this.button3.TabIndex = 32;
-            this.button3.Tag = "с";
-            this.button3.Text = "ПОТЕРИ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dateTimePicker2.Location = new System.Drawing.Point(120, 217);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.TabIndex = 6;
             // 
             // booksBindingSource1
             // 
@@ -1462,43 +1721,49 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 624);
+            this.ClientSize = new System.Drawing.Size(1165, 638);
             this.Controls.Add(this.metroTabControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
             this.Style = MetroFramework.MetroColorStyle.Blue;
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.Scroll += new System.Windows.Forms.ScrollEventHandler(this.metroScrollBar1_Scroll_1);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.metroTabPage4.ResumeLayout(false);
-            this.metroTabPage4.PerformLayout();
-            this.metroTabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.metroTabPage5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.metroTabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.metroTabPage4.ResumeLayout(false);
+            this.metroTabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -1511,7 +1776,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.metroTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.metroTabPage5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.metroTabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userContextBindingSource)).EndInit();
@@ -1526,7 +1798,6 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.TextBox textBox1;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
@@ -1559,7 +1830,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -1640,12 +1910,37 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label25;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label28;
     }
 }
