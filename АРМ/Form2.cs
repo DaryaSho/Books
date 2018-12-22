@@ -14,8 +14,12 @@ namespace АРМ
 {
     public partial class Form2 : MetroForm
     {
-        int idbook =0;
+        public int idUser;
+        private int price;
+        int idbook = 0;
         string put = @"G:\курсовая Даши\бд\АРМ\АРМ\Resources\notebook-5.png";
+        List<Books> booksBuy = new List<Books>();
+
         public Form2()
         {
             InitializeComponent();
@@ -23,41 +27,34 @@ namespace АРМ
 
         private void Form2_Load(object sender, EventArgs e)
         {
-          
+           
+            
             using (UserContext db = new UserContext())
             {
                 Books books = db.Books.First();
-                idbook= books.Id;
+                foreach (User element in db.Users)
+                {
+                    if (element.ID == idUser)
+                    {
+                        pictureBox17.Image = new Bitmap(element.Photo);
+                        metroLabel16.Text = element.Name;
+                    }
+                }
+                idbook = books.Id;
                
-
-
             }
-           
-           
-           //this.dataGridView1.Columns["UnitPrice"].DefaultCellStyle.Format = "c";
             addCombobox();
-            //ScrollAll();
             showBooks();
+           
 
 
         }
 
-        private void metroScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
 
-          
 
-        }
 
-        private void metroPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -90,20 +87,13 @@ namespace АРМ
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-
-
             textBox7.Multiline = true;
-            // Add vertical scroll bars to the TextBox control.
             textBox7.ScrollBars = ScrollBars.Vertical;
-            // Allow the TAB key to be entered in the TextBox control.
             textBox7.AcceptsReturn = true;
-            // Allow the TAB key to be entered in the TextBox control.
             textBox7.AcceptsTab = true;
             textBox7.SelectionStart = textBox7.Text.Length;
             textBox7.ScrollToCaret();
             textBox7.Refresh();
-
-
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -113,10 +103,8 @@ namespace АРМ
             {
                 foreach (Categor categor in db.Categors)
                 {
-
                     textBox7.Text += categor.CategorName + "\r\n" + categor.CategorDescrip + "\r\n";
                     textBox7.Text += "--------------------------------------------------------\r\n";
-
                 }
             }
         }
@@ -124,7 +112,6 @@ namespace АРМ
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             addDialog(3, "Издательство");
-            // MessageBox.Show("Добавление прошло успешно! с=");
 
         }
 
@@ -149,8 +136,8 @@ namespace АРМ
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            if (textBox5.Text == "") textBox5.BackColor = Color.LightGray;
-            else textBox5.BackColor = Color.White;
+            /// if (textBox5.Text == "") textBox5.BackColor = Color.LightGray;
+            // else textBox5.BackColor = Color.White;
             AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
             auto.Clear();
             using (UserContext db = new UserContext())
@@ -184,23 +171,17 @@ namespace АРМ
         {
             using (UserContext db = new UserContext())
             {
-                if (index == 1) db.Styles.Add(new АРМ.Style { StyleName = name, StyleDescrip = descript });
-                if (index == 2) db.Categors.Add(new Categor { CategorName = name, CategorDescrip = descript });
-                if (index == 3) db.Publication.Add(new Publication { PublicatName = name, PublicatDescrip = descript });
+                if (index == 1) db.Styles.Add(new АРМ.Style {StyleName = name, StyleDescrip = descript});
+                if (index == 2) db.Categors.Add(new Categor {CategorName = name, CategorDescrip = descript});
+                if (index == 3) db.Publication.Add(new Publication {PublicatName = name, PublicatDescrip = descript});
                 db.SaveChanges();
-
-
             }
-
-
-
         }
 
         public bool Check(TextBox textBox)
         {
             bool result = false;
             if (textBox.Text != "") result = true;
-
             return result;
         }
 
@@ -209,65 +190,56 @@ namespace АРМ
             bool result = false;
             using (UserContext db = new UserContext())
             {
-
                 int lengt = 0;
-
                 if (index == 1)
                 {
-
                     foreach (var element in db.Styles)
                     {
                         if (element.StyleName == name) lengt++;
                     }
-
-
                 }
+
                 if (index == 2)
                 {
-
                     foreach (var element in db.Categors)
                     {
                         if (element.CategorName == name) lengt++;
                     }
-
                 }
+
                 if (index == 3)
                 {
                     foreach (var element in db.Publication)
                     {
                         if (element.PublicatName == name) lengt++;
                     }
-
                 }
+
                 if (index == 4)
                 {
                     foreach (var element in db.Books)
                     {
                         if (element.BookName == name) lengt++;
                     }
-
                 }
 
                 if (lengt == 0)
                     result = true;
                 else MessageBox.Show("Такой элемент уже существует");
-
-
-
             }
+
             return result;
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            if (textBox6.Text == "") textBox6.BackColor = Color.LightGray;
-            else textBox6.BackColor = Color.White;
+            // if (textBox6.Text == "") textBox6.BackColor = Color.LightGray;
+            // else textBox6.BackColor = Color.White;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             remove(2, "Категории", textBox5.Text);
-
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
@@ -282,10 +254,7 @@ namespace АРМ
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -296,7 +265,6 @@ namespace АРМ
         {
             using (UserContext db = new UserContext())
             {
-
                 if (Index == 1)
                 {
 
@@ -307,9 +275,9 @@ namespace АРМ
                             db.Styles.Remove(style);
 
                         }
-
                     }
                 }
+
                 if (Index == 2)
                 {
                     foreach (Categor categor in db.Categors)
@@ -334,18 +302,17 @@ namespace АРМ
                         }
 
                     }
-
                 }
 
                 db.SaveChanges();
-
             }
         }
 
 
         public void remove(int index, string name, string text)
         {
-            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы " + name, "Удаление", MessageBoxButtons.YesNo);
+            DialogResult dialogResult =
+                MessageBox.Show("Удалить из таблицы " + name, "Удаление", MessageBoxButtons.YesNo);
             if (!Check(textBox5)) MessageBox.Show("Заполните название " + name);
             else
             {
@@ -366,9 +333,11 @@ namespace АРМ
 
             }
         }
+
         public void addDialog(int index, string name)
         {
-            DialogResult dialogResult = MessageBox.Show("Добавить в таблицу " + name, "Добавление", MessageBoxButtons.YesNo);
+            DialogResult dialogResult =
+                MessageBox.Show("Добавить в таблицу " + name, "Добавление", MessageBoxButtons.YesNo);
             if (!Check(textBox5) || !Check(textBox6)) MessageBox.Show("Заполните поля");
 
             if ((Check(textBox5) && (CheckTable(textBox5.Text, index) && Check(textBox6))))
@@ -387,7 +356,8 @@ namespace АРМ
 
         public void insertTable(int index, string name, string text)
         {
-            DialogResult dialogResult = MessageBox.Show("Изменить запись из таблице " + name, "Изменение", MessageBoxButtons.YesNo);
+            DialogResult dialogResult =
+                MessageBox.Show("Изменить запись из таблице " + name, "Изменение", MessageBoxButtons.YesNo);
             if (!Check(textBox5)) MessageBox.Show("Заполните название " + name);
             else
             {
@@ -456,9 +426,11 @@ namespace АРМ
         {
             DialogResult dialogResult = MessageBox.Show("Добавить новую книгу ", "Добавление", MessageBoxButtons.YesNo);
             if (!Check(textBox1) || !Check(textBox2) || !Check(textBox3) || !Check(textBox4) || !Check(textBox8)
-                || comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "") MessageBox.Show("Заполните поля");
+                || comboBox1.Text == "" || comboBox2.Text == "" ||
+                comboBox3.Text == "") MessageBox.Show("Заполните поля");
 
-            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2) && Check(textBox3) && Check(textBox4) && Check(textBox8)))
+            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2) && Check(textBox3) &&
+                                    Check(textBox4) && Check(textBox8)))
             {
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -473,13 +445,14 @@ namespace АРМ
                             PublicatiomYear = Convert.ToInt32(textBox4.Text),
                             PublicationId = bPub(comboBox1.Text),
                             StyleId = bstyl(comboBox2.Text),
-                            CategorId =bCat(comboBox3.Text),
+                            CategorId = bCat(comboBox3.Text),
                             BookPhoto = put,
                         });
                         db.SaveChanges();
 
 
                     }
+
                     MessageBox.Show("Добавление прошло успешно! с=");
                 }
                 else MessageBox.Show("Добавление отменено.");
@@ -490,7 +463,8 @@ namespace АРМ
             }
         }
 
-        public string catB(int index) {
+        public string catB(int index)
+        {
             using (UserContext db = new UserContext())
             {
                 string name = "---";
@@ -508,12 +482,13 @@ namespace АРМ
             int index = 1;
             using (UserContext db = new UserContext())
             {
-                
+
                 foreach (Categor element in db.Categors)
                 {
                     if (element.CategorName == name) index = element.Id;
-                }          
+                }
             }
+
             return index;
         }
 
@@ -541,6 +516,7 @@ namespace АРМ
                 {
                     if (element.PublicatName == name) index = element.Id;
                 }
+
                 return index;
             }
         }
@@ -556,6 +532,7 @@ namespace АРМ
                 {
                     if (element.Id == index) name = element.StyleName;
                 }
+
                 return name;
             }
         }
@@ -570,6 +547,7 @@ namespace АРМ
                 {
                     if (element.StyleName == name) index = element.Id;
                 }
+
                 return index;
             }
         }
@@ -582,13 +560,16 @@ namespace АРМ
             int index = 0;
             using (UserContext db = new UserContext())
             {
-              
+
                 foreach (Books element in db.Books)
                 {
-                    if ((element.BookName== name) && (element.BookAvtor==avtor) && (element.PublicationId==publiicat) && (element.PublicatiomYear==pubyear)) index = element.Id;
+                    if ((element.BookName == name) && (element.BookAvtor == avtor) &&
+                        (element.PublicationId == publiicat) &&
+                        (element.PublicatiomYear == pubyear)) index = element.Id;
                 }
-               
+
             }
+
             return index;
         }
 
@@ -600,29 +581,31 @@ namespace АРМ
 
                 foreach (Stock element in db.Stocks)
                 {
-                    if (element.BookId ==id )  index = element.BookCount;
+                    if (element.BookId == id) index = element.BookCount;
                 }
+
                 return index;
             }
+
             return index;
         }
 
-       
+
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 put = openFileDialog1.FileName;
-                pictureBox13.Image = new Bitmap(put);
+                pictureBox31.Image = new Bitmap(put);
 
             }
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            textBox7.Multiline = true;         
-            textBox7.ScrollBars = ScrollBars.Vertical;           
+            textBox7.Multiline = true;
+            textBox7.ScrollBars = ScrollBars.Vertical;
             textBox7.AcceptsReturn = true;
             textBox7.AcceptsTab = true;
             textBox7.SelectionStart = textBox7.Text.Length;
@@ -630,55 +613,59 @@ namespace АРМ
             textBox7.Refresh();
         }
 
-  
 
 
-        
+
+
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Удалить из таблицы Книги " , "Удаление", MessageBoxButtons.YesNo);
-            
-          
-            
-                using (UserContext db = new UserContext())
+            DialogResult dialogResult =
+                MessageBox.Show("Удалить из таблицы Книги ", "Удаление", MessageBoxButtons.YesNo);
+
+
+
+            using (UserContext db = new UserContext())
+            {
+                if (dialogResult == DialogResult.Yes)
                 {
-                    if (dialogResult == DialogResult.Yes)
-                    {
 
-                        foreach (Books books in db.Books)
+                    foreach (Books books in db.Books)
+                    {
+                        if ((books.BookName == textBox1.Text) && (books.BookAvtor == textBox2.Text) &&
+                            (pubB(books.PublicationId) == comboBox1.Text))
                         {
-                            if ((books.BookName == textBox1.Text)&&(books.BookAvtor==textBox2.Text)&&(pubB(books.PublicationId)==comboBox1.Text))
-                            {
-                                db.Books.Remove(books);
-                                MessageBox.Show("Удаление прошло успешно");
-                            }
-
+                            db.Books.Remove(books);
+                            MessageBox.Show("Удаление прошло успешно");
                         }
-                       
 
                     }
-                    if (dialogResult == DialogResult.No)
-                    {
-
-                        
-                        MessageBox.Show("Удаление отменено");
-
-                    }
-                    db.SaveChanges();
 
 
                 }
 
+                if (dialogResult == DialogResult.No)
+                {
+
+
+                    MessageBox.Show("Удаление отменено");
+
+                }
+
+                db.SaveChanges();
+
+
+            }
+
 
         }
 
-       
+
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
             dataGridView2.Rows.Clear();
-            showBooks();         
+            showBooks();
         }
 
         public void showBooks()
@@ -688,24 +675,39 @@ namespace АРМ
                 foreach (Books books in db.Books)
                 {
                     int i = dataGridView2.Rows.Add();
-                     dataGridView2.Rows[i].Cells[0].Value = books.BookName;
-                     dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
-                     dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
-                     dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
-                     dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
-                     dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
-                     dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
-                     dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
-                     dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                    dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                    dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                    dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                    dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                    dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                    dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                    dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                    dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                    dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                    dataGridView2.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
+
+                     i = dataGridView3.Rows.Add();
+                    dataGridView3.Rows[i].Cells[0].Value = books.BookName;
+                    dataGridView3.Rows[i].Cells[1].Value = books.BookAvtor;
+                    dataGridView3.Rows[i].Cells[2].Value = books.BookDescrip;
+                    dataGridView3.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                    dataGridView3.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                    dataGridView3.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                    dataGridView3.Rows[i].Cells[6].Value = catB(books.CategorId);
+                    dataGridView3.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                    dataGridView3.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                    dataGridView3.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
+
                 }
             }
         }
 
+
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-         
-            textBox1.Text = Convert.ToString( dataGridView2.CurrentRow.Cells[0].Value);
+
+            textBox1.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[0].Value);
             textBox2.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value);
             textBox3.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[2].Value);
             textBox8.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[7].Value);
@@ -713,8 +715,8 @@ namespace АРМ
             comboBox1.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[3].Value);
             comboBox2.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[4].Value);
             comboBox3.Text = Convert.ToString(dataGridView2.CurrentRow.Cells[6].Value);
-            pictureBox13.Image =(Image)dataGridView2.CurrentRow.Cells[8].Value;
-    }
+            pictureBox31.Image = (Image) dataGridView2.CurrentRow.Cells[8].Value;
+        }
 
         private void metroLabel18_Click(object sender, EventArgs e)
         {
@@ -723,8 +725,7 @@ namespace АРМ
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-            if (textBox10.Text == "") textBox5.BackColor = Color.LightGray;
-            else textBox10.BackColor = Color.White;
+          
             AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
             auto.Clear();
             using (UserContext db = new UserContext())
@@ -736,7 +737,7 @@ namespace АРМ
                     auto.Add(books.BookAvtor);
                 }
 
-               
+
             }
 
             textBox10.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -749,7 +750,7 @@ namespace АРМ
             using (UserContext db = new UserContext())
             {
                 dataGridView2.Rows.Clear();
-                
+
                 foreach (Books books in db.Books)
                 {
                     if (books.BookName == textBox10.Text || books.BookAvtor == textBox10.Text)
@@ -764,6 +765,10 @@ namespace АРМ
                         dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
                         dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
                         dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                        dataGridView2.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
+
+
+
                     }
                 }
             }
@@ -795,7 +800,7 @@ namespace АРМ
                 {
                     if (index == 1)
                     {
-                        if (books.PublicationId== bPub(comboBox4.Text))
+                        if (books.PublicationId == bPub(comboBox4.Text))
                         {
                             int i = dataGridView2.Rows.Add();
                             dataGridView2.Rows[i].Cells[0].Value = books.BookName;
@@ -807,6 +812,7 @@ namespace АРМ
                             dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
                             dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
                             dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                            dataGridView2.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
                         }
                     }
 
@@ -824,6 +830,7 @@ namespace АРМ
                             dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
                             dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
                             dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                            dataGridView2.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
                         }
                     }
 
@@ -841,6 +848,8 @@ namespace АРМ
                             dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
                             dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
                             dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                            dataGridView2.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
+
                         }
                     }
 
@@ -862,9 +871,11 @@ namespace АРМ
         {
             DialogResult dialogResult = MessageBox.Show("Изменить  книгу ", "Изменение", MessageBoxButtons.YesNo);
             if (!Check(textBox1) || !Check(textBox2) || !Check(textBox3) || !Check(textBox4) || !Check(textBox8)
-                || comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "") MessageBox.Show("Заполните поля");
+                || comboBox1.Text == "" || comboBox2.Text == "" ||
+                comboBox3.Text == "") MessageBox.Show("Заполните поля");
 
-            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2) && Check(textBox3) && Check(textBox4) && Check(textBox8)))
+            if (Check(textBox1) && (CheckTable(textBox1.Text, 4) && Check(textBox2) && Check(textBox3) &&
+                                    Check(textBox4) && Check(textBox8)))
             {
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -872,13 +883,15 @@ namespace АРМ
                     {
                         foreach (Books books in db.Books)
                         {
-                            if ((books.BookName == label4.Text) && (books.BookAvtor == label5.Text) && (pubB(books.PublicationId) == label9.Text))
+                            if ((books.BookName == label4.Text) && (books.BookAvtor == label5.Text) &&
+                                (pubB(books.PublicationId) == label9.Text))
                             {
                                 db.Books.Remove(books);
-                              
+
                             }
 
                         }
+
                         db.Books.Add(new Books
                         {
                             BookName = textBox1.Text,
@@ -895,6 +908,7 @@ namespace АРМ
 
 
                     }
+
                     MessageBox.Show("Изменение прошло успешно! с=");
                 }
                 else MessageBox.Show("Изменение отменено.");
@@ -905,21 +919,21 @@ namespace АРМ
             }
         }
 
-      
 
-       
 
-     
 
-      
 
-      
 
-       
+
+
+
+
+
+
 
         private void pictureBox13_MouseHover(object sender, EventArgs e)
         {
-            metroToolTip1.SetToolTip(pictureBox13, "Нажмите на картинку, чтобы добавить картинку для книги");
+            metroToolTip1.SetToolTip(pictureBox31, "Нажмите на картинку, чтобы добавить картинку для книги");
         }
 
         private void pictureBox14_MouseHover(object sender, EventArgs e)
@@ -937,7 +951,7 @@ namespace АРМ
             label31.Text = comboBox3.Text;
             panel1.Visible = true;
             panel1.Dock = DockStyle.Fill;
-            pictureBox28.Image = pictureBox13.Image;
+            pictureBox28.Image = pictureBox31.Image;
         }
 
         private void pictureBox29_Click(object sender, EventArgs e)
@@ -958,14 +972,15 @@ namespace АРМ
 
         private void pictureBox23_Click(object sender, EventArgs e)
         {
-            
-            DialogResult dialogResult = MessageBox.Show("Добавить книгу в склад", "Добавление", MessageBoxButtons.YesNo);
+
+            DialogResult dialogResult =
+                MessageBox.Show("Добавить книгу в склад", "Добавление", MessageBoxButtons.YesNo);
 
             if (dialogResult == DialogResult.Yes)
             {
-                
-                  
-              
+
+
+
                 if (Check(textBox15) && Check(textBox1) && Check(textBox2))
                 {
 
@@ -1001,11 +1016,12 @@ namespace АРМ
 
         private void pictureBox26_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Добавить книгу в потери", "Добавление", MessageBoxButtons.YesNo);
+            DialogResult dialogResult =
+                MessageBox.Show("Добавить книгу в потери", "Добавление", MessageBoxButtons.YesNo);
 
             if (dialogResult == DialogResult.Yes)
             {
-                if (Check(textBox16) && Check(textBox1) && Check(textBox2)&& (Check(textBox17)))
+                if (Check(textBox16) && Check(textBox1) && Check(textBox2) && (Check(textBox17)))
                 {
 
                     if (Convert.ToInt32(textBox17.Text) > 0)
@@ -1015,12 +1031,14 @@ namespace АРМ
                             int caunt = 0;
                             foreach (Stock stock in db.Stocks)
                             {
-                                if (stock.BookId == iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text), bPub(comboBox1.Text)))
-                                caunt += stock.BookCount;
+                                if (stock.BookId == iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text),
+                                        bPub(comboBox1.Text)))
+                                    caunt += stock.BookCount;
                                 db.Stocks.Remove(stock);
                             }
 
-                            if( caunt - Convert.ToInt32(textBox17.Text) >= 0){
+                            if (caunt - Convert.ToInt32(textBox17.Text) >= 0)
+                            {
                                 db.Losses.Add(new Losses()
                                 {
                                     BookId = iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text),
@@ -1030,9 +1048,10 @@ namespace АРМ
                                 });
                                 db.Stocks.Add(new Stock()
                                 {
-                                    BookId = iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text), bPub(comboBox1.Text)),
-                                    BookCount = caunt - Convert.ToInt32(textBox17.Text), 
-                                    DataBook =  DateTime.Now
+                                    BookId = iBooks(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox4.Text),
+                                        bPub(comboBox1.Text)),
+                                    BookCount = caunt - Convert.ToInt32(textBox17.Text),
+                                    DataBook = DateTime.Now
                                 });
                                 db.SaveChanges();
                                 MessageBox.Show("Добавление прошло успешно");
@@ -1050,6 +1069,170 @@ namespace АРМ
             {
                 MessageBox.Show("Вы отменили добавление");
             }
+        }
+
+        private void pictureBox21_Click(object sender, EventArgs e)
+        {
+            using (UserContext db = new UserContext())
+            {
+                dataGridView2.Rows.Clear();
+                foreach (Books books in db.Books)
+                {
+                    if ((books.BookPrice >= (Convert.ToInt32(textBox11.Text))) &&
+                        (books.BookPrice <= (Convert.ToInt32(textBox12.Text))))
+                    {
+                        int i = dataGridView2.Rows.Add();
+                        dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                        dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                        dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                        dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                        dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                        dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                        dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                        dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                        dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                    }
+                }
+            }
+        }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (metroCheckBox1.Checked == true)
+            {
+                using (UserContext db = new UserContext())
+                {
+                    dataGridView2.Rows.Clear();
+
+                    foreach (Books books in db.Books)
+                    {
+
+
+                        if (books.PublicationId == bPub(comboBox4.Text) && books.StyleId == bstyl(comboBox5.Text) &&
+                            (books.CategorId == bCat(comboBox6.Text) &&
+                             (books.BookPrice > (Convert.ToInt32(textBox11.Text)) &&
+                              (books.BookPrice < (Convert.ToInt32(textBox12.Text))))))
+                        {
+                            int i = dataGridView2.Rows.Add();
+                            dataGridView2.Rows[i].Cells[0].Value = books.BookName;
+                            dataGridView2.Rows[i].Cells[1].Value = books.BookAvtor;
+                            dataGridView2.Rows[i].Cells[2].Value = books.BookDescrip;
+                            dataGridView2.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                            dataGridView2.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                            dataGridView2.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                            dataGridView2.Rows[i].Cells[6].Value = catB(books.CategorId);
+                            dataGridView2.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                            dataGridView2.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                            dataGridView2.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
+                        }
+
+
+
+
+
+
+                    }
+                }
+            }
+
+            if (metroCheckBox1.Checked == false) showBooks();
+        }
+
+        private void pictureBox33_Click(object sender, EventArgs e)
+        {
+            using (UserContext db = new UserContext())
+            {
+                dataGridView2.Rows.Clear();
+
+                foreach (Books books in db.Books)
+                {
+                    if (books.BookName == textBox10.Text || books.BookAvtor == textBox10.Text)
+                    {
+                        int i = dataGridView3.Rows.Add();
+                        dataGridView3.Rows[i].Cells[0].Value = books.BookName;
+                        dataGridView3.Rows[i].Cells[1].Value = books.BookAvtor;
+                        dataGridView3.Rows[i].Cells[2].Value = books.BookDescrip;
+                        dataGridView3.Rows[i].Cells[3].Value = pubB(books.PublicationId);
+                        dataGridView3.Rows[i].Cells[4].Value = stylB(books.StyleId);
+                        dataGridView3.Rows[i].Cells[5].Value = books.PublicatiomYear.ToString();
+                        dataGridView3.Rows[i].Cells[6].Value = catB(books.CategorId);
+                        dataGridView3.Rows[i].Cells[7].Value = books.BookPrice.ToString();
+                        dataGridView3.Rows[i].Cells[8].Value = new Bitmap(books.BookPhoto);
+                        dataGridView3.Rows[i].Cells[9].Value = CaunBook(books.Id).ToString();
+
+
+
+                    }
+                }
+            }
+        }
+
+        private void pictureBox32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox22_Click_1(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(dataGridView2.CurrentRow.Cells[9].Value) == 0) MessageBox.Show("Книг на складе нет");
+            else
+            {
+                groupBox4.Visible = true;
+                groupBox4.Location = new Point(829, 234);
+                groupBox4.Width = 280;
+                groupBox4.Height = 310;
+                label20.Text = "На сккладе осталось " + Convert.ToString(dataGridView2.CurrentRow.Cells[9].Value) +
+                               " книг(а)";
+
+                booksBuy.Add(new Books()
+                {
+                    BookName = Convert.ToString(dataGridView2.CurrentRow.Cells[0].Value),
+                    BookAvtor = Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value),
+                    BookDescrip = Convert.ToString(dataGridView2.CurrentRow.Cells[2].Value),
+                    PublicationId = bPub(Convert.ToString(dataGridView2.CurrentRow.Cells[3].Value)),
+                    StyleId = bstyl(Convert.ToString(dataGridView2.CurrentRow.Cells[4].Value)),
+                    PublicatiomYear = Convert.ToInt32(dataGridView2.CurrentRow.Cells[5].Value),
+                    CategorId = bCat(Convert.ToString(dataGridView2.CurrentRow.Cells[6].Value)),
+                    BookPrice = Convert.ToInt32(dataGridView2.CurrentRow.Cells[7].Value),
+                    BookPhoto = Convert.ToString(dataGridView2.CurrentRow.Cells[8].Value)
+
+                });
+
+            }
+
+
+
+
+        }
+
+        private void pictureBox30_Click(object sender, EventArgs e)
+        {
+          groupBox4.Visible = false;
+          if (Convert.ToInt32(dataGridView2.CurrentRow.Cells[9].Value) - Convert.ToInt32(textBox13.Text) < 0) MessageBox.Show("Нельзя взять так много книг."+ label20.Text);
+          else
+            {
+               int i = dataGridView3.Rows.Add();
+              dataGridView3.Rows[i].Cells[0].Value = booksBuy[booksBuy.Count-1].BookName;
+              dataGridView3.Rows[i].Cells[1].Value = booksBuy[booksBuy.Count - 1].BookAvtor;
+              dataGridView3.Rows[i].Cells[2].Value = booksBuy[booksBuy.Count - 1].BookDescrip;
+              dataGridView3.Rows[i].Cells[3].Value = pubB(booksBuy[booksBuy.Count - 1].PublicationId);
+              dataGridView3.Rows[i].Cells[4].Value = stylB(booksBuy[booksBuy.Count - 1].StyleId);
+              dataGridView3.Rows[i].Cells[5].Value = booksBuy[booksBuy.Count - 1].PublicatiomYear.ToString();
+              dataGridView3.Rows[i].Cells[6].Value = catB(booksBuy[booksBuy.Count - 1].CategorId);
+              dataGridView3.Rows[i].Cells[7].Value = booksBuy[booksBuy.Count - 1].BookPrice.ToString();
+              dataGridView3.Rows[i].Cells[8].Value = new Bitmap(booksBuy[booksBuy.Count - 1].BookPhoto);
+              dataGridView3.Rows[i].Cells[9].Value =
+                  CaunBook(booksBuy[booksBuy.Count - 1].Id) - Convert.ToInt32(textBox13.Text);
+              MessageBox.Show("Добавлено в корзину");
+
+            }
+
+
         }
     }
 }
