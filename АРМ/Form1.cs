@@ -15,6 +15,7 @@ namespace АРМ
 {
     public partial class Form1 : MetroForm
     {
+      
         public Form1()
         {
             InitializeComponent();
@@ -33,8 +34,10 @@ namespace АРМ
                    
                   //  pictureBox1.Refresh();
                     MessageBox.Show("Вы зашли в программу");
+                   
                    var form2 = new Form2();
                     form2.ShowDialog();
+                    form2.idUser = u.ID;
                     this.Show();
 
                 }
@@ -109,6 +112,11 @@ namespace АРМ
         private void label1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
         }
     }
 

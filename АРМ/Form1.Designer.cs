@@ -48,6 +48,7 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -89,7 +90,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(27, 177);
+            this.button2.Location = new System.Drawing.Point(26, 187);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(245, 42);
             this.button2.TabIndex = 9;
@@ -99,14 +100,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(147, 7);
+            this.textBox3.Location = new System.Drawing.Point(150, 17);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 10;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(147, 35);
+            this.textBox4.Location = new System.Drawing.Point(150, 45);
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(100, 22);
@@ -114,21 +115,21 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(147, 74);
+            this.textBox5.Location = new System.Drawing.Point(150, 73);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 12;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(147, 105);
+            this.textBox6.Location = new System.Drawing.Point(150, 101);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
             this.textBox6.TabIndex = 13;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(147, 133);
+            this.textBox7.Location = new System.Drawing.Point(150, 129);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
             this.textBox7.TabIndex = 14;
@@ -145,7 +146,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(37, 7);
+            this.metroLabel3.Location = new System.Drawing.Point(30, 17);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(48, 20);
             this.metroLabel3.TabIndex = 23;
@@ -163,7 +164,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(37, 43);
+            this.metroLabel4.Location = new System.Drawing.Point(30, 45);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(57, 20);
             this.metroLabel4.TabIndex = 25;
@@ -172,7 +173,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(40, 76);
+            this.metroLabel5.Location = new System.Drawing.Point(30, 73);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(42, 20);
             this.metroLabel5.TabIndex = 26;
@@ -181,7 +182,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(37, 103);
+            this.metroLabel6.Location = new System.Drawing.Point(30, 101);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(67, 20);
             this.metroLabel6.TabIndex = 27;
@@ -190,7 +191,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(40, 135);
+            this.metroLabel7.Location = new System.Drawing.Point(30, 129);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(49, 20);
             this.metroLabel7.TabIndex = 28;
@@ -211,6 +212,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox4);
@@ -222,11 +224,23 @@
             this.panel1.Controls.Add(this.metroLabel4);
             this.panel1.Controls.Add(this.metroLabel5);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(157, 178);
+            this.panel1.Location = new System.Drawing.Point(136, 178);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 231);
+            this.panel1.Size = new System.Drawing.Size(299, 251);
             this.panel1.TabIndex = 32;
             this.panel1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(276, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 20);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -297,6 +311,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
