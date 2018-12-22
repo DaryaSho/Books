@@ -143,6 +143,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\продажи-png-3.png" />
+    <None Include="Resources\корзина-для-сайта-png-4.png" />
     <None Include="Resources\zoom-out.png" />
     <None Include="Resources\zoom-in.png" />
     <None Include="Resources\binoculars1.png" />

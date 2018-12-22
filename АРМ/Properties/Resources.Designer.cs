@@ -253,6 +253,26 @@ namespace АРМ.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap корзина_для_сайта_png_4 {
+            get {
+                object obj = ResourceManager.GetObject("корзина-для-сайта-png-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap продажи_png_3 {
+            get {
+                object obj = ResourceManager.GetObject("продажи-png-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap утка_1 {
             get {
                 object obj = ResourceManager.GetObject("утка 1", resourceCulture);
