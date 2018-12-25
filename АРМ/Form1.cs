@@ -16,6 +16,7 @@ namespace АРМ
     public partial class Form1 : MetroForm
     {
       
+      
         public Form1()
         {
             InitializeComponent();
@@ -25,20 +26,20 @@ namespace АРМ
         {
 
             UserContext db = new UserContext();
-            var users = db.Users;
+            //var users =;
 
-            foreach (User u in users)
+            foreach (User u in db.Users)
             {
                 if ((textBox1.Text == u.Login) && (textBox2.Text == u.Password))
                 {
                    
                   //  pictureBox1.Refresh();
                     MessageBox.Show("Вы зашли в программу");
-                   
-                   var form2 = new Form2();
-                    form2.ShowDialog();
-                    form2.idUser = u.ID;
-                    this.Show();
+                    File.WriteAllText("1.txt", u.ID.ToString());
+                    Form2 form2 = new Form2();
+                   // form2.ShowDialog();
+                    
+                    form2.Show();
 
                 }
             }
@@ -83,9 +84,8 @@ namespace АРМ
                     Name = textBox5.Text,
                     Phone = textBox6.Text,
                     Adress = textBox7.Text,
-                   
-
-
+                    Photo = @"G:\курсовая Даши\бд\АРМ\АРМ\Resources\user-4.png",
+                    Level = 1
                 };
                 db.Users.Add(user1);
                 db.SaveChanges();
